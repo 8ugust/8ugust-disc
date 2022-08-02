@@ -1,0 +1,42 @@
+.gnb_menu_active {
+    transition: opacity 0.2s;
+    position: fixed;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+    opacity: 1;
+}
+
+.gnb_menu_hidden {
+    visibility: hidden;
+    position: fixed;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+    opacity: 0;  
+}
+
+.gnb_background {
+    background-color: gray;
+    opacity: 0.5;
+    width: 20%;
+}
+
+.gnb_body {
+    max-height: 100vh;
+    background-color: white;
+    width: 80%;
+}
+
+.gnb_body_header {
+    border-bottom: 1px solid #eeeff1;
+    height: 60px;
+}
+
+.gnb_body_close {
+    text-align: center;
+    font-size: 30px;
+}
+
