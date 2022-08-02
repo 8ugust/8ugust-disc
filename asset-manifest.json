@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/8ugust-disc/static/css/main.fb90ea32.css",
+    "main.js": "/8ugust-disc/static/js/main.0a04cb93.js",
+    "static/media/logo_text2.png": "/8ugust-disc/static/media/logo_text2.653503aaa95303b7fb66.png",
+    "index.html": "/8ugust-disc/index.html",
+    "main.fb90ea32.css.map": "/8ugust-disc/static/css/main.fb90ea32.css.map",
+    "main.0a04cb93.js.map": "/8ugust-disc/static/js/main.0a04cb93.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fb90ea32.css",
+    "static/js/main.0a04cb93.js"
+  ]
+}
