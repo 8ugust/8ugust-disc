@@ -1,7 +1,7 @@
 import './App.css';
 import React from 'react';
 import menu_icon from './img/menu.png';
-import logo_text from './img/logo_text2.png';
+import logo_text from './img/logo_text.png';
 import Gnb from './components/gnb';
 import Definition from './components/definition';
 import Test from './components/test';
@@ -29,8 +29,8 @@ function App() {
 				<img src={logo_text} className='logo_text' alt='personality_behaviors' onClick={() => setStatus(1)}></img>
 				<img src={menu_icon} className='menu_icon' alt='menu_icon' onClick={fnIsGnb}></img>
 			</div>
-			{status === 1 ? <Test /> : null}
-			{status === 3 ? <Definition /> : null}
+			<Test status={status} setStatus={setStatus}/>
+			<Definition status={status} setStatus={setStatus}/>
 			<Gnb fnIsGnb={fnIsGnb} isGnb={isGnb} setStatus={setStatus}/>
 		</div>
 		<div className='pc-right'></div>

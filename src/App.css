@@ -1,6 +1,12 @@
 .App {
     display: flex;
+    overflow: scroll;
+    overflow-x: hidden;
     flex-direction: column;
+}
+
+.App::-webkit-scrollbar {
+    display: none;
 }
 
 .pc-left {

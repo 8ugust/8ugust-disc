@@ -1,10 +1,10 @@
 import styles from './index.module.css';
 
-function Test() {
+function Test(props) {
 
     return (
         <>
-        <div className={styles.test_wrap}>TEST - HI</div>
+        <div className={props.status === 1 ? styles.test_wrap_show : styles.test_wrap_hide}>TEST - HI</div>
         </>
     );
 }

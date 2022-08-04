@@ -1,4 +1,11 @@
-.test_wrap {
+.test_wrap_hide {
+    visibility: hidden;
+    height: 0px;
+}
+
+.test_wrap_show {
     border-top: 1px solid #eeeff1;
+    flex-direction: column;
+    display: flex;
 }
 
