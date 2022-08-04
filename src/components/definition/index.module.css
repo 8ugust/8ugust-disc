@@ -1,6 +1,5 @@
 .def_wrap_hide {
-    visibility: hidden;
-    height: 0px;
+    display: none;
 }
 
 .def_wrap_show {

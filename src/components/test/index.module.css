@@ -1,11 +1,71 @@
 .test_wrap_hide {
-    visibility: hidden;
-    height: 0px;
+    display: none;
 }
 
 .test_wrap_show {
-    border-top: 1px solid #eeeff1;
     flex-direction: column;
     display: flex;
+    height: 100%;
+    width: 100%;
 }
+
+.discript_wrap {
+    background-color: #33a474;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 30px;
+    display: flex;
+    width: 100%;
+}
+
+.discript_wrap h1 {
+    margin-bottom: 0px;
+    margin-top: 0px;
+    color: white;
+}
+
+.discript_wrap p {
+    padding-bottom: 30px;
+    margin-bottom: 0px;
+    padding-top: 10px;
+    margin-top: 0px;
+    color: white;
+}
+
+.discript_wrap hr {
+    border: 1px solid #eeeff1;
+    width: 90%;
+}
+
+.how_wrap {
+    padding-top: 15px;
+    height: 100%;
+    width: 100%;
+}
+
+.how {
+    padding-bottom: 20px;
+    margin-right: 30px;
+    margin-left: 30px;
+}
+
+.how_inner {
+    background-color: hsla(0,0%,100%,.8);
+    border-radius: 10px;
+    height: 60px;
+}
+
+.how_inner p {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    line-height: 60px;
+    text-align: left;
+    padding-left: 10px;
+    font-size: .8em;
+    font-weight: 600;
+    color: #576071;
+}
+
+
 
