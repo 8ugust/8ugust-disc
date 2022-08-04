@@ -23,6 +23,7 @@
 
 .text_wrap h1 {
     padding-bottom: 20px;
+    line-height: 1.5;
     font-size: 1.5em;
     color: white;
 }
