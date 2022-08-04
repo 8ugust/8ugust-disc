@@ -4,7 +4,7 @@ function Test() {
 
     return (
         <>
-        <div>TEST - HI</div>
+        <div className={styles.test_wrap}>TEST - HI</div>
         </>
     );
 }

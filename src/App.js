@@ -5,7 +5,6 @@ import logo_text from './img/logo_text2.png';
 import Gnb from './components/gnb';
 import Definition from './components/definition';
 import Test from './components/test';
-import Result from './components/Result';
 
 function App() {
 
@@ -31,7 +30,6 @@ function App() {
 				<img src={menu_icon} className='menu_icon' alt='menu_icon' onClick={fnIsGnb}></img>
 			</div>
 			{status === 1 ? <Test /> : null}
-			{status === 2 ? <Result /> : null}
 			{status === 3 ? <Definition /> : null}
 			<Gnb fnIsGnb={fnIsGnb} isGnb={isGnb} setStatus={setStatus}/>
 		</div>

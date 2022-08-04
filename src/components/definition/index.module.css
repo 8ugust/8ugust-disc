@@ -1,0 +1,19 @@
+.def_wrap {
+    border-top: none;
+    width: 100%;
+    height: 100%;
+}
+
+.text_wrap {
+    background-color: #4298b4;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px 15px 0;
+    text-align: center;
+    display: flex;
+    width: 100%;
+}
+
+.def_img {
+    width: 100%;
+}
