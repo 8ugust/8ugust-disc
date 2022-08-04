@@ -1,0 +1,67 @@
+.quest_wrap {
+    padding-bottom: 20px;
+    padding-top: 10px;
+    height: 200px;
+    width: 90%;
+}
+
+.quest_inner {
+    border: 1px solid #dddfe2;
+    flex-direction: column;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.quest_title {
+    align-items: center;
+    flex-direction: row;
+    display: flex;
+    height: 20%;
+}
+
+/* .quest_title div {
+    text-align: center;
+    font-size: 12px;
+    width: 80px;
+} */
+
+.quest_row {
+    align-items: center;
+    flex-direction: row;
+    display: flex;
+    height: 20%;
+}
+
+.quest_row img {
+    height: 40px;
+    width: 40px;
+}
+
+.col_1 {
+    padding-left: 20px;
+    text-align: center;
+    color: #576071;
+    font-weight: 600;
+    font-size: .8em;
+    width: 20%;
+}
+
+.col_2 {
+    text-align: center;
+    color: #576071;
+    font-weight: 600;
+    font-size: .8em;
+    width: 60%;
+}
+
+.col_3 {
+    padding-right: 20px;
+    text-align: center;
+    color: #576071;
+    font-weight: 600;
+    font-size: .8em;
+    width: 20%;
+}

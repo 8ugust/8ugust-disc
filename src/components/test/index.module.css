@@ -34,7 +34,7 @@
 }
 
 .discript_wrap hr {
-    border: 1px solid #eeeff1;
+    color: #eeeff1;
     width: 90%;
 }
 
@@ -76,6 +76,13 @@
 }
 
 .div_bottom_2 {
+    padding-bottom: 10px;
     width: 100%;
+}
+
+.quest_div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
