@@ -1,7 +1,20 @@
 .App {
     display: flex;
-    margin: 0 auto;
     flex-direction: column;
+}
+
+.pc-left {
+    display: none;
+    background-color: #f3f3f3;
+    width: calc((100vw - 500px)/2);
+    height: 100vh;
+}
+
+.pc-right {
+    display: none;
+    background-color: #f3f3f3;
+    width: calc((100vw - 500px)/2);
+    height: 100vh;
 }
 
 .App .navbar {
@@ -27,3 +40,17 @@
     height: 60px;
 }
 
+@media (min-width: 500px) {
+    .App {
+      width: 500px;
+      height: 100vh;
+    }
+
+    .pc-left {
+        display: block;
+    }
+
+    .pc-right {
+        display: block;
+    }
+}

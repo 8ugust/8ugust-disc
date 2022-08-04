@@ -23,6 +23,8 @@ function App() {
 	const [status, setStatus] = React.useState(1);
 
 	return (
+		<>
+		<div className='pc-left'></div>
 		<div className="App">
 			<div className='navbar'>
 				<img src={logo_text} className='logo_text' alt='personality_behaviors' onClick={() => setStatus(1)}></img>
@@ -33,6 +35,8 @@ function App() {
 			{status === 3 ? <Definition /> : null}
 			<Gnb fnIsGnb={fnIsGnb} isGnb={isGnb} setStatus={setStatus}/>
 		</div>
+		<div className='pc-right'></div>
+		</>
 	);
 }
 

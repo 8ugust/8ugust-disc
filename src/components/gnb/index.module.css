@@ -19,6 +19,16 @@
     opacity: 0;  
 }
 
+@media (min-width:500px) {
+    .gnb_menu_active {
+        width: 500px;
+    }
+
+    .gnb_menu_hidden {
+        width: 500px;
+    }
+}
+
 .gnb_background {
     background-color: gray;
     opacity: 0.5;
