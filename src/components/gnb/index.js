@@ -15,7 +15,7 @@ function Gnb(props) {
     return (
         <>
         <div className={props.isGnb ? styles.gnb_menu_active : styles.gnb_menu_hidden}>
-            <div className={styles.gnb_background}></div>
+            <div className={styles.gnb_background} onClick={props.fnIsGnb}></div>
             <div className={styles.gnb_body}>
                 <div className={styles.gnb_body_header}>
                     <img src={exit} className={styles.gnb_exit} onClick={props.fnIsGnb} alt='exit_button'></img>

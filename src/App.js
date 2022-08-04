@@ -26,7 +26,7 @@ function App() {
 		<div className='pc-left'></div>
 		<div className="App">
 			<div className='navbar'>
-				<img src={logo_text} className='logo_text' alt='personality_behaviors' onClick={() => setStatus(1)}></img>
+				<img src={logo_text} className='logo_text' alt='personality_behaviors'></img>
 				<img src={menu_icon} className='menu_icon' alt='menu_icon' onClick={fnIsGnb}></img>
 			</div>
 			<Test status={status} setStatus={setStatus}/>

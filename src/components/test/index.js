@@ -1,4 +1,5 @@
 import styles from './index.module.css';
+import div_bottom_2 from '../../img/div_bottom_2.png';
 
 function Test(props) {
 
@@ -27,6 +28,7 @@ function Test(props) {
                     </div>
                 </div>
             </div>
+            <img src={div_bottom_2} className={styles.div_bottom_2} alt='div_bottom_2'/>
         </div>
         </>
     );
