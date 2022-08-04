@@ -1,3 +1,4 @@
+import React from 'react';
 import styles from './index.module.css';
 import div_bottom_2 from '../../img/div_bottom_2.png';
 import Questions from '../questions';
@@ -39,6 +40,16 @@ function Test(props) {
         [['공손한', 'C', 'C'], ['새롭게 시작하는', 'D', 'D'], ['낙천적인', 'I', 'I'], ['도움을 주려하는', 'S', 'S']]
     ];
 
+    // Answer
+    const [answer, setAnswer] = React.useState(new Array(28).fill([null, null]));
+    const FnAnswer = (chk, idx) => {
+        let newAnswer = [...answer];
+        if (chk === 'B') newAnswer[idx][0] = idx;   // Best
+        if (chk === 'W') newAnswer[idx][1] = idx;   // Wrst
+
+        setAnswer(newAnswer);
+    }
+
     return (
         <>
         <div className={props.status === 1 ? styles.test_wrap_show : styles.test_wrap_hide}>
@@ -70,7 +81,7 @@ function Test(props) {
             <img src={div_bottom_2} className={styles.div_bottom_2} alt='div_bottom_2'/>
             <div className={styles.quest_div}>
                 {questions.map((item, i) => {
-                    return (<Questions key={i} idx={i} questions={item}/>)
+                    return (<Questions key={i} idx={i} questions={item} answer={answer} fnAnswer={FnAnswer}/>)
                 })}
             </div>
         </div>
