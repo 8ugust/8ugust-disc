@@ -53,6 +53,15 @@
 .how_inner {
     background-color: hsla(0,0%,100%,.8);
     border-radius: 10px;
+    align-items: center;
+    flex-direction: row;
+    display: flex;
+}
+
+.how_inner img {
+    padding-left: 10px;
+    height: 30px;
+    width: 30px;
 }
 
 .how_inner p {
