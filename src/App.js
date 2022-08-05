@@ -6,6 +6,7 @@ import Gnb from './components/gnb';
 import Definition from './components/definition';
 import Test from './components/test';
 import Result from './components/Result';
+import Wait from './components/Wait';
 
 function App() {
 
@@ -48,6 +49,13 @@ function App() {
 		if (isGnb === true) setIsGnb(false);
 	}
 
+	// Wait Layer
+	const [isWait, setIsWait] = React.useState(false);
+	const fnIsWait = () => {
+		if (isWait === false) setIsWait(true);
+		if (isWait === true) setIsWait(false);
+	}
+
 	// Contnets
 	// 1 - DISC Test Page
 	// 2 - DISC Result Page
@@ -67,10 +75,11 @@ function App() {
 			</div>
 			<div className='content-body'>
 				<Definition status={status} setStatus={setStatus}/>
-				<Test status={status} setStatus={setStatus} setBefCalAnswer={setBefCalAnswer} questions={questions} isGnb={isGnb}/>
+				<Test status={status} setStatus={setStatus} setBefCalAnswer={setBefCalAnswer} questions={questions} isGnb={isGnb} fnIsWait={fnIsWait}/>
 				<Result status={status} setStatus={setStatus} befCalAnswer={befCalAnswer} questions={questions}/>
 			</div>
-			<Gnb fnIsGnb={fnIsGnb} isGnb={isGnb} status={status} setStatus={setStatus}/>
+			<Gnb fnIsGnb={fnIsGnb} isGnb={isGnb} status={status} setStatus={setStatus} fnIsWait={fnIsWait}/>
+			<Wait isWait={isWait} fnIsWait={fnIsWait} status={status}/>
 		</div>
 		<div className='pc-right'></div>
 		</>

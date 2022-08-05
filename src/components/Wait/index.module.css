@@ -1,0 +1,22 @@
+.wait_layer_active {
+    transition: all 0.1s linear 0s;
+    background-color: grey;
+    visibility: visible;
+    position: fixed;
+    display: flex;
+    z-index: 100;
+    height: 100%;
+    width: 100%;
+    opacity: 0.5;
+}
+
+.wait_layer_hidden {
+    transition: all 0.1s linear 0s;
+    visibility: hidden;
+    position: fixed;
+    display: flex;
+    z-index: 100;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+}

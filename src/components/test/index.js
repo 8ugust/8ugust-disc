@@ -85,7 +85,9 @@ function Test(props) {
         }
 
         props.setBefCalAnswer(answer);
-        return props.setStatus(2);
+        props.setStatus(2)
+        props.fnIsWait()
+        return true;
     }
 
     return (
