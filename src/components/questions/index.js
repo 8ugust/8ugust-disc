@@ -43,7 +43,7 @@ function Questions (props) {
 
     return (
         <>
-        <div className={styles.quest_wrap}>
+        <div className={styles.quest_wrap} ref={props.answer[props.idx][2].element}>
             <div className={(props.answer[props.idx][0][0] !== null && props.answer[props.idx][0][1] !== null) ? styles.quest_inner_done : styles.quest_inner}>
                 <div className={styles.quest_title}>
                     <div className={styles.col_1}>적합</div>

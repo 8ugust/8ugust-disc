@@ -5,6 +5,7 @@ import logo_text from './img/logo_text.png';
 import Gnb from './components/gnb';
 import Definition from './components/definition';
 import Test from './components/test';
+import Result from './components/Result';
 
 function App() {
 
@@ -31,9 +32,10 @@ function App() {
 			</div>
 			<div className='content-body'>
 				<Test status={status} setStatus={setStatus}/>
+				<Result status={status} setStatus={setStatus}/>
 				<Definition status={status} setStatus={setStatus}/>
 			</div>
-			<Gnb fnIsGnb={fnIsGnb} isGnb={isGnb} setStatus={setStatus}/>
+			<Gnb fnIsGnb={fnIsGnb} isGnb={isGnb} status={status} setStatus={setStatus}/>
 		</div>
 		<div className='pc-right'></div>
 		</>

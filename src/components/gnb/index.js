@@ -21,8 +21,8 @@ function Gnb(props) {
                     <img src={exit} className={styles.gnb_exit} onClick={props.fnIsGnb} alt='exit_button'></img>
                 </div>
                 <div className={styles.gnb_wrap}>
-                    <li className={styles.gnb_frst} onClick={onClickTest}>검사하기</li>
-                    <li className={styles.gnb_list} onClick={onClickDef}>DISC 란</li>
+                    <li className={props.status === 1 ? styles.gnb_select : styles.gnb_list} onClick={onClickTest}>검사하기</li>
+                    <li className={props.status === 3 ? styles.gnb_select : styles.gnb_list} onClick={onClickDef}>DISC 란</li>
                 </div>
                 <div className={styles.gnb_footer}>8ugust</div>
             </div>

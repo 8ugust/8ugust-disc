@@ -69,17 +69,56 @@ function Test(props) {
     const [answer_27, setAnswer_27] = React.useState([null, null]);
     const [answer_28, setAnswer_28] = React.useState([null, null]);
 
+    // Scroll Hook
+    const useMoveScroll = () => {
+        const element = React.useRef();
+        const onMoveToElement = () => {
+            element.current.scrollIntoView({behavior:'smooth', block:'start'});
+        };
+
+        return {element, onMoveToElement};
+    }
+
     // Answer
     const answer = [
-        [answer_1, setAnswer_1], [answer_2, setAnswer_2], [answer_3, setAnswer_3], [answer_4, setAnswer_4], [answer_5, setAnswer_5], 
-        [answer_6, setAnswer_6], [answer_7, setAnswer_7], [answer_8, setAnswer_8], [answer_9, setAnswer_9], [answer_10, setAnswer_10], 
-        [answer_11, setAnswer_11], [answer_12, setAnswer_12], [answer_13, setAnswer_13], [answer_14, setAnswer_14], [answer_15, setAnswer_15], [answer_16, setAnswer_16], 
-        [answer_17, setAnswer_17], [answer_18, setAnswer_18], [answer_19, setAnswer_19], [answer_20, setAnswer_20], [answer_21, setAnswer_21], [answer_22, setAnswer_22], 
-        [answer_23, setAnswer_23], [answer_24, setAnswer_24], [answer_25, setAnswer_25], [answer_26, setAnswer_26], [answer_27, setAnswer_27], [answer_28, setAnswer_28]
+        [answer_1, setAnswer_1, useMoveScroll()], [answer_2, setAnswer_2, useMoveScroll()], [answer_3, setAnswer_3, useMoveScroll()], 
+        [answer_4, setAnswer_4, useMoveScroll()], [answer_5, setAnswer_5, useMoveScroll()], [answer_6, setAnswer_6, useMoveScroll()], 
+        [answer_7, setAnswer_7, useMoveScroll()], [answer_8, setAnswer_8, useMoveScroll()], [answer_9, setAnswer_9, useMoveScroll()], 
+        [answer_10, setAnswer_10, useMoveScroll()], [answer_11, setAnswer_11, useMoveScroll()], [answer_12, setAnswer_12, useMoveScroll()], 
+        [answer_13, setAnswer_13, useMoveScroll()], [answer_14, setAnswer_14, useMoveScroll()], [answer_15, setAnswer_15, useMoveScroll()], 
+        [answer_16, setAnswer_16, useMoveScroll()], [answer_17, setAnswer_17, useMoveScroll()], [answer_18, setAnswer_18, useMoveScroll()], 
+        [answer_19, setAnswer_19, useMoveScroll()], [answer_20, setAnswer_20, useMoveScroll()], [answer_21, setAnswer_21, useMoveScroll()], 
+        [answer_22, setAnswer_22, useMoveScroll()], [answer_23, setAnswer_23, useMoveScroll()], [answer_24, setAnswer_24, useMoveScroll()], 
+        [answer_25, setAnswer_25, useMoveScroll()], [answer_26, setAnswer_26, useMoveScroll()], [answer_27, setAnswer_27, useMoveScroll()], 
+        [answer_28, setAnswer_28, useMoveScroll()]
     ];
 
     // Percentage
     const [percent, setPercent] = React.useState(0);
+
+    // Check Empty Question And Test End
+    const fnQuestEnd = () => {
+        var move = [];
+        var count = 0;
+        var isEmpty = false;
+        answer.forEach((item, idx) => {
+            if (item[0][0] === null || item[0][1] === null) {
+                isEmpty = true;
+                move.push(idx);
+                count += 1;
+            }
+        })
+
+        if (isEmpty === true) {
+            alert(count + "개의 항목에 답변이 되지 않았습니다.\n모든 항목에 답변 하십시오.");
+            if (move[0] !== 0) answer[move[0]-1][2].onMoveToElement();
+            if (move[0] === 0) answer[move[0]][2].onMoveToElement();
+            return false;
+        }
+
+
+        return props.setStatus(2);
+    }
 
     return (
         <>
@@ -91,7 +130,7 @@ function Test(props) {
                     <div className={styles.how}>
                         <div className={styles.how_inner}>
                             <img src={time} alt='time'/>
-                            <p>총 28개의 질문으로 구성되어 있으며 소요 시간은 15분 내외입니다.</p>
+                            <p>총 28개 문항으로 구성되어 있으며 소요 시간은 10분 내외입니다.</p>
                         </div>
                     </div>
                     <div className={styles.how}>
@@ -115,7 +154,7 @@ function Test(props) {
                 })}
             </div>
             <div className={styles.quest_end_wrap}>
-                <div className={styles.quest_end_btn}>검사 결과</div>
+                <div className={styles.quest_end_btn} onClick={fnQuestEnd}>검사 결과</div>
             </div>
             <div className={styles.progress_wrap}>
                 <div className={styles.percentage}>{percent}%</div>
