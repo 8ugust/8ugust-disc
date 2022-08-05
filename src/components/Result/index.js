@@ -1,10 +1,15 @@
 import styles from './index.module.css';
 
-function Result() {
+function Result(props) {
+    if (props.status === 2) {
+        console.log(props.befCalAnswer);
+    }
 
     return (
         <>
-        <div>Result - HI</div>
+        <div className={props.status === 2 ? styles.result_wrap_show : styles.result_wrap_hide}>
+            HI
+        </div>
         </>
     );
 }
