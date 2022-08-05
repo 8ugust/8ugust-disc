@@ -5,28 +5,32 @@ import chk_best from '../../img/check_best.png';
 import chk_wrst from '../../img/check_wrst.png';
 
 function Questions (props) {
-    const chkSrc = (chk, jdx) => {
-        var v_chk = null;
-        for (var i=0; i<props.answer.length; i++) {
-            if (i === jdx) {
-                if (chk === 'B') v_chk = props.answer[i][0];
-                if (chk === 'W') v_chk = props.answer[i][1];
-                break;
-            }
+    // force reRender
+    const [render, setRender] = React.useState([]);
+
+    // Chnage IMG Src
+    const setChk = (chk, idx, jdx) => {
+        const newAnswer = props.answer[idx][0];
+        if (chk === 'B') {
+            if (newAnswer[1] === jdx) {
+                return false;
+            } newAnswer[0] = jdx;
         }
 
-        if (v_chk === null) return chk_none;
-        if (v_chk !== jdx) return chk_none;
-        if (v_chk === jdx) {
-            if (chk === 'B') return chk_best;
-            if (chk === 'W') return chk_wrst;
+        if (chk === 'W') {
+            if (newAnswer[0] === jdx) {
+                return false;
+            } newAnswer[1] = jdx;
         }
+
+        props.answer[idx][1](newAnswer);
+        setRender([...render]);
     }
 
     return (
         <>
         <div className={styles.quest_wrap}>
-            <div className={styles.quest_inner}>
+            <div className={(props.answer[props.idx][0][0] !== null && props.answer[props.idx][0][1] !== null) ? styles.quest_inner_done : styles.quest_inner}>
                 <div className={styles.quest_title}>
                     <div className={styles.col_1}>적합</div>
                     <div className={styles.col_2}></div>
@@ -35,9 +39,13 @@ function Questions (props) {
                 {props.questions.map((item, jdx) => {
                     return(
                         <div key={jdx} className={styles.quest_row}>
-                            <div className={styles.col_1}><img src={chkSrc('B', jdx)} alt='chk_best' onClick={null} /></div>
+                            <div className={styles.col_1}>
+                                <img className={props.answer[props.idx][0][1] === jdx ? styles.no_select : null} src={props.answer[props.idx][0][0] === jdx ? chk_best : chk_none} alt='chk_best' onClick={() => setChk('B', props.idx, jdx)} />
+                            </div>
                             <div className={styles.col_2}>{item[0]}</div>
-                            <div className={styles.col_3}><img src={chkSrc('W', jdx)} alt='chk_best' onClick={null} /></div>
+                            <div className={styles.col_3}>
+                                <img className={props.answer[props.idx][0][0] === jdx ? styles.no_select : null} src={props.answer[props.idx][0][1] === jdx ? chk_wrst : chk_none} alt='chk_wrst' onClick={() => setChk('W', props.idx, jdx)} />
+                            </div>
                         </div>
                     )
                 })}

@@ -40,15 +40,43 @@ function Test(props) {
         [['공손한', 'C', 'C'], ['새롭게 시작하는', 'D', 'D'], ['낙천적인', 'I', 'I'], ['도움을 주려하는', 'S', 'S']]
     ];
 
-    // Answer
-    const [answer, setAnswer] = React.useState(new Array(28).fill([null, null]));
-    const FnAnswer = (chk, idx) => {
-        let newAnswer = [...answer];
-        if (chk === 'B') newAnswer[idx][0] = idx;   // Best
-        if (chk === 'W') newAnswer[idx][1] = idx;   // Wrst
+    const [answer_1, setAnswer_1] = React.useState([null, null]);
+    const [answer_2, setAnswer_2] = React.useState([null, null]);
+    const [answer_3, setAnswer_3] = React.useState([null, null]);
+    const [answer_4, setAnswer_4] = React.useState([null, null]);
+    const [answer_5, setAnswer_5] = React.useState([null, null]);
+    const [answer_6, setAnswer_6] = React.useState([null, null]);
+    const [answer_7, setAnswer_7] = React.useState([null, null]);
+    const [answer_8, setAnswer_8] = React.useState([null, null]);
+    const [answer_9, setAnswer_9] = React.useState([null, null]);
+    const [answer_10, setAnswer_10] = React.useState([null, null]);
+    const [answer_11, setAnswer_11] = React.useState([null, null]);
+    const [answer_12, setAnswer_12] = React.useState([null, null]);
+    const [answer_13, setAnswer_13] = React.useState([null, null]);
+    const [answer_14, setAnswer_14] = React.useState([null, null]);
+    const [answer_15, setAnswer_15] = React.useState([null, null]);
+    const [answer_16, setAnswer_16] = React.useState([null, null]);
+    const [answer_17, setAnswer_17] = React.useState([null, null]);
+    const [answer_18, setAnswer_18] = React.useState([null, null]);
+    const [answer_19, setAnswer_19] = React.useState([null, null]);
+    const [answer_20, setAnswer_20] = React.useState([null, null]);
+    const [answer_21, setAnswer_21] = React.useState([null, null]);
+    const [answer_22, setAnswer_22] = React.useState([null, null]);
+    const [answer_23, setAnswer_23] = React.useState([null, null]);
+    const [answer_24, setAnswer_24] = React.useState([null, null]);
+    const [answer_25, setAnswer_25] = React.useState([null, null]);
+    const [answer_26, setAnswer_26] = React.useState([null, null]);
+    const [answer_27, setAnswer_27] = React.useState([null, null]);
+    const [answer_28, setAnswer_28] = React.useState([null, null]);
 
-        setAnswer(newAnswer);
-    }
+    // Answer
+    const answer = [
+        [answer_1, setAnswer_1], [answer_2, setAnswer_2], [answer_3, setAnswer_3], [answer_4, setAnswer_4], [answer_5, setAnswer_5], 
+        [answer_6, setAnswer_6], [answer_7, setAnswer_7], [answer_8, setAnswer_8], [answer_9, setAnswer_9], [answer_10, setAnswer_10], 
+        [answer_11, setAnswer_11], [answer_12, setAnswer_12], [answer_13, setAnswer_13], [answer_14, setAnswer_14], [answer_15, setAnswer_15], [answer_16, setAnswer_16], 
+        [answer_17, setAnswer_17], [answer_18, setAnswer_18], [answer_19, setAnswer_19], [answer_20, setAnswer_20], [answer_21, setAnswer_21], [answer_22, setAnswer_22], 
+        [answer_23, setAnswer_23], [answer_24, setAnswer_24], [answer_25, setAnswer_25], [answer_26, setAnswer_26], [answer_27, setAnswer_27], [answer_28, setAnswer_28]
+    ];
 
     return (
         <>
@@ -81,7 +109,7 @@ function Test(props) {
             <img src={div_bottom_2} className={styles.div_bottom_2} alt='div_bottom_2'/>
             <div className={styles.quest_div}>
                 {questions.map((item, i) => {
-                    return (<Questions key={i} idx={i} questions={item} answer={answer} fnAnswer={FnAnswer}/>)
+                    return (<Questions key={i} idx={i} questions={item} answer={answer}/>)
                 })}
             </div>
         </div>
