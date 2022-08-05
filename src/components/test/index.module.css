@@ -39,7 +39,6 @@
 }
 
 .how_wrap {
-    padding-top: 15px;
     height: 100%;
     width: 100%;
 }
@@ -86,3 +85,60 @@
     flex-direction: column;
 }
 
+.quest_end_wrap {
+    justify-content: center;
+    padding-bottom: 50px;
+    padding-right: 20px;
+    padding-left: 20px;
+    display: flex;
+}
+
+.quest_end_btn {
+    padding: 20px 70px 20px 70px;
+    background-color: #6c4d7b;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 18px;
+    color: white;
+}
+
+.progress_wrap {
+    background-color: #576071;
+    justify-content: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    position: fixed;
+    display: flex;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.percentage {
+    color: #fff;
+    flex: 0 0 30px;
+    font-size: .8em;
+    text-align: right;
+    width: 30px;
+    z-index: 9;
+}
+
+.progress_bar {
+    background-color: #fff;
+    border-radius: 10px;
+    flex: 0 0 calc(100% - 75px);
+    height: 4px;
+    margin-left: 15px;
+    max-width: 1000px;
+    overflow: hidden;
+    position: relative;
+}
+
+.filler {
+    background-color: #33a474;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: all .2s ease-in-out;
+}

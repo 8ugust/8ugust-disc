@@ -29,8 +29,10 @@ function App() {
 				<img src={logo_text} className='logo_text' alt='personality_behaviors'></img>
 				<img src={menu_icon} className='menu_icon' alt='menu_icon' onClick={fnIsGnb}></img>
 			</div>
-			<Test status={status} setStatus={setStatus}/>
-			<Definition status={status} setStatus={setStatus}/>
+			<div className='content-body'>
+				<Test status={status} setStatus={setStatus}/>
+				<Definition status={status} setStatus={setStatus}/>
+			</div>
 			<Gnb fnIsGnb={fnIsGnb} isGnb={isGnb} setStatus={setStatus}/>
 		</div>
 		<div className='pc-right'></div>

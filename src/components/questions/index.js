@@ -24,7 +24,21 @@ function Questions (props) {
         }
 
         props.answer[idx][1](newAnswer);
+        calProgress();
         setRender([...render]);
+    }
+
+    // Calculate Progress
+    const calProgress = () => {
+        var count = 0;
+        props.answer.forEach((item) => {
+            if (item[0][0] !== null && item[0][1] !== null) {
+                count += 1;
+            }
+        })
+
+        count = Math.ceil(count/28 * 100);
+        props.setPercent(count);
     }
 
     return (

@@ -78,24 +78,26 @@ function Test(props) {
         [answer_23, setAnswer_23], [answer_24, setAnswer_24], [answer_25, setAnswer_25], [answer_26, setAnswer_26], [answer_27, setAnswer_27], [answer_28, setAnswer_28]
     ];
 
+    // Percentage
+    const [percent, setPercent] = React.useState(0);
+
     return (
         <>
         <div className={props.status === 1 ? styles.test_wrap_show : styles.test_wrap_hide}>
             <div className={styles.discript_wrap}>
                 <h1>DISC 행동유형검사</h1>
                 <p>Personality Behavior Type</p>
-                <hr />
                 <div className={styles.how_wrap}>
                     <div className={styles.how}>
                         <div className={styles.how_inner}>
                             <img src={time} alt='time'/>
-                            <p>소요 검사 시간은 15분 내외입니다.</p>
+                            <p>총 28개의 질문으로 구성되어 있으며 소요 시간은 15분 내외입니다.</p>
                         </div>
                     </div>
                     <div className={styles.how}>
                         <div className={styles.how_inner}>
                             <img src={check} alt='check'/>
-                            <p>선택지 중 본인을 가장 잘 나타내는 것과 그렇지 않은 것을 고르십시오.</p>
+                            <p>선택지 중 본인을 나타내기에 가장 적합하다고 느껴지는 것과 그렇지 않은 것을 고르십시오.</p>
                         </div>
                     </div>
                     <div className={styles.how}>
@@ -109,8 +111,17 @@ function Test(props) {
             <img src={div_bottom_2} className={styles.div_bottom_2} alt='div_bottom_2'/>
             <div className={styles.quest_div}>
                 {questions.map((item, i) => {
-                    return (<Questions key={i} idx={i} questions={item} answer={answer}/>)
+                    return (<Questions key={i} idx={i} questions={item} answer={answer} setPercent={setPercent}/>)
                 })}
+            </div>
+            <div className={styles.quest_end_wrap}>
+                <div className={styles.quest_end_btn}>검사 결과</div>
+            </div>
+            <div className={styles.progress_wrap}>
+                <div className={styles.percentage}>{percent}%</div>
+                <div className={styles.preogress_bar}>
+                    <div className={styles.filler} style={{width: percent+'%'}}></div>
+                </div>
             </div>
         </div>
         </>
