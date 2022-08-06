@@ -20,3 +20,35 @@
     width: 100%;
     opacity: 0;
 }
+
+.loading {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    margin: auto;
+}
+
+
+.loading img {
+    animation: rotate_img 3s linear infinite;
+    transform-origin: 50% 50%;
+    height: 100px;
+    width: 100px;
+}
+
+@media(min-width: 500px) {
+    .wait_layer_active {
+        width: 500px;
+    }
+
+    .wait_layer_hidden {
+        width: 500px;
+    }
+}
+
+@keyframes rotate_img {
+    100% {
+        transform: rotate(360deg);
+    }
+}

@@ -50,7 +50,7 @@ function App() {
 	}
 
 	// Wait Layer
-	const [isWait, setIsWait] = React.useState(false);
+	const [isWait, setIsWait] = React.useState(true);
 	const fnIsWait = () => {
 		if (isWait === false) setIsWait(true);
 		if (isWait === true) setIsWait(false);
@@ -60,7 +60,7 @@ function App() {
 	// 1 - DISC Test Page
 	// 2 - DISC Result Page
 	// 3 - DISC Definition Page
-	const [status, setStatus] = React.useState(1);
+	const [status, setStatus] = React.useState(2);
 
 	// Result Variable
 	const [befCalAnswer, setBefCalAnswer] = React.useState([]);
