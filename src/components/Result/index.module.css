@@ -1,18 +1,12 @@
 .result_wrap_show {
+	justify-content: center;
 	flex-direction: column;
+	align-items: center;
 	display: flex;
 	height: 100%;
 	width: 100%;
 }
 
 .result_wrap_hide {
-	display: none;
-}
-
-.chart_wrap_show {
-	display: flex;
-}
-
-.chart_wrap_hide {
 	display: none;
 }

@@ -90,7 +90,9 @@ function Result(props) {
     return (
         <>
         <div className={props.status === 2 ? styles.result_wrap_show : styles.result_wrap_hide}>
-			<Line options={options} data={data} redraw={true}/>
+			<div>
+				<Line options={options} data={data} redraw={true}/>
+			</div>
         </div>
         </>
     );
