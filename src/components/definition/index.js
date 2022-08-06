@@ -6,7 +6,7 @@ function Definition(props) {
 
 	return (
 		<>
-		<div className={props.status === 3 ? styles.def_wrap_show : styles.def_wrap_hide}>
+		<div className={props.status === 4 ? styles.def_wrap_show : styles.def_wrap_hide}>
 			<div className={styles.text_wrap}>
 				<h1>DISC는 여러분의<br />'행동유형(behavior)' 을 진단합니다.</h1>
 				<p>

@@ -58,9 +58,10 @@ function App() {
 
 	// Contnets
 	// 1 - DISC Test Page
-	// 2 - DISC Result Page
-	// 3 - DISC Definition Page
-	const [status, setStatus] = React.useState(2);
+	// 2 - DISC Load Page
+	// 3 - DISC Result Page
+	// 4 - DISC Definition Page
+	const [status, setStatus] = React.useState(1);
 
 	// Result Variable
 	const [befCalAnswer, setBefCalAnswer] = React.useState([]);
@@ -79,7 +80,7 @@ function App() {
 				<Result status={status} setStatus={setStatus} befCalAnswer={befCalAnswer} questions={questions}/>
 			</div>
 			<Gnb fnIsGnb={fnIsGnb} isGnb={isGnb} status={status} setStatus={setStatus} fnIsWait={fnIsWait}/>
-			<Wait isWait={isWait} fnIsWait={fnIsWait} status={status}/>
+			<Wait isWait={isWait} fnIsWait={fnIsWait} status={status} setStatus={setStatus}/>
 		</div>
 		<div className='pc-right'></div>
 		</>

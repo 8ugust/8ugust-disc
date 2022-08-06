@@ -8,3 +8,11 @@
 .result_wrap_hide {
 	display: none;
 }
+
+.chart_wrap_show {
+	display: flex;
+}
+
+.chart_wrap_hide {
+	display: none;
+}

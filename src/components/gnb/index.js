@@ -18,7 +18,7 @@ function Gnb(props) {
                 </div>
                 <div className={styles.gnb_wrap}>
                     <li className={props.status === 1 ? styles.gnb_select : styles.gnb_list} onClick={() => onClickFn(1)}>검사하기</li>
-                    <li className={props.status === 3 ? styles.gnb_select : styles.gnb_list} onClick={() => onClickFn(3)}>DISC 란</li>
+                    <li className={props.status === 4 ? styles.gnb_select : styles.gnb_list} onClick={() => onClickFn(4)}>DISC 란</li>
                 </div>
                 <div className={styles.gnb_footer}>8ugust</div>
             </div>

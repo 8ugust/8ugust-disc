@@ -5,14 +5,7 @@ function Wait (props) {
 
     if (props.isWait === true) {
         window.scrollTo(0, 0);
-
-        if (props.status === 2) {
-            setTimeout(() => {
-                props.fnIsWait();
-            }, 500)
-        } else {
-            props.fnIsWait();
-        }
+        setTimeout(() => {props.fnIsWait()}, 1000);
     }
 
     return (
