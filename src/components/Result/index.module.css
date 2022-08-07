@@ -10,3 +10,65 @@
 .result_wrap_hide {
 	display: none;
 }
+
+.result_type_wrap {
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 30px;
+	display: flex;
+	width: 100%;
+}
+
+.caption {
+	padding-bottom: 15px;
+	text-align: center;
+	font-size: 1.3em;
+	line-height: 1.5;
+	color: #51596a;
+}
+
+.type_nm {
+    padding-bottom: 10px;
+	font-size: 2.3em;
+    font-weight: 700;
+	color: #51596a;
+}
+
+/* #FF6565, #FFFFAB, #93ADDD, #77F586*/
+.type_cd {
+	padding-bottom: 30px; 
+	font-size: 1.7em; 
+	font-weight: 600; 
+	color: #51596a; 
+}
+
+.percent_wrap img{
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+.percent_D {
+	background-color: #FFA3A3;
+	height: 100px;
+	width: 100%;
+}
+
+.percent_I {
+	background-color: #FFFFAB;
+	height: 100px;
+	width: 100%;
+}
+
+.percent_S {
+	background-color: #93ADDD;
+	height: 100px;
+	width: 100%;
+}
+
+.percent_C {
+	background-color: #B4FABC;
+	height: 100px;
+	width: 100%;
+}
