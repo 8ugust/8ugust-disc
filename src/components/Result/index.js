@@ -1,13 +1,5 @@
 import React from 'react';
 import styles from './index.module.css';
-import div_top_D from '../../img/div_top_D.png';
-import div_top_I from '../../img/div_top_I.png';
-import div_top_S from '../../img/div_top_S.png';
-import div_top_C from '../../img/div_top_C.png';
-import div_bottom_D from '../../img/div_bottom_D.png';
-import div_bottom_I from '../../img/div_bottom_I.png';
-import div_bottom_S from '../../img/div_bottom_S.png';
-import div_bottom_C from '../../img/div_bottom_C.png';
 
 function Result(props) {
     
@@ -79,31 +71,13 @@ function Result(props) {
 		if (Object.keys(result).length === 0) return null;
 		const vScore = result.Score[0][0];
 
-		if (type === 'img_top') {
-			if (vScore === 'D') return div_top_D;
-			if (vScore === 'I') return div_top_I;
-			if (vScore === 'S') return div_top_S;
-			if (vScore === 'C') return div_top_C;
+		if (type === 'polygon') {
+			if (vScore === 'D') return styles.polygon_D;
+			if (vScore === 'I') return styles.polygon_I;
+			if (vScore === 'S') return styles.polygon_S;
+			if (vScore === 'C') return styles.polygon_C;
 		}
 
-		if (type === 'img_mid') {
-			if (vScore === 'D') return styles.percent_D;
-			if (vScore === 'I') return styles.percent_I;
-			if (vScore === 'S') return styles.percent_S;
-			if (vScore === 'C') return styles.percent_C;
-		}
-
-		if (type === 'img_bot') {
-			if (vScore === 'D') return div_bottom_D;
-			if (vScore === 'I') return div_bottom_I;
-			if (vScore === 'S') return div_bottom_S;
-			if (vScore === 'C') return div_bottom_C;
-		}
-
-		// if (vScore === 'D') return styles.type_cd_D;
-		// if (vScore === 'I') return styles.type_cd_I;
-		// if (vScore === 'S') return styles.type_cd_S;
-		// if (vScore === 'C') return styles.type_cd_C;
 	}
 
     return (
@@ -114,11 +88,32 @@ function Result(props) {
 				<div className={styles.type_nm}>타입명</div>
 				<div className={styles.type_cd}>CODE</div>
 				<div className={styles.percent_wrap}>
-					<img src={fnTypeStyles('img_top')} alt='img_top'/>
-					<div className={fnTypeStyles('img_mid')}>
+					<svg className={styles.percent_bg} viewBox='0 0 100 200'>
+						<polygon className={fnTypeStyles('polygon')} points='0,5 10,0 40,15 100,0 100,95 90,100 60,85 0,100'/>
+					</svg>
+					<div className={styles.percent_div}>
+						<div className={styles.percent_div_inner}>
+							{Object.keys(result).length !== 0 ? result.Score.map((item, idx) => {
+								const caption_nm = [null, null];
+								[0, 1, 2, 3].map(val => {
+									//여기부터 작성
+								})
+								if (idx === 0) caption_nm[0] = 'D';
+								if (idx === 1) caption_nm[0] = 'I';
+								if (idx === 2) caption_nm[0] = 'S';
+								if (idx === 3) caption_nm[0] = 'C';
 
+
+								return (
+									<div key={idx}>
+										<div className={idx !== 3 ? styles.percent_content_y : styles.percent_content_n}>
+											<div className={styles.caption}>{caption_nm}</div>
+										</div>
+									</div>
+								);
+							}) : null}
+						</div>
 					</div>
-					<img src={fnTypeStyles('img_bot')} alt='img_bot'/>
 				</div>
 			</div>
         </div>
