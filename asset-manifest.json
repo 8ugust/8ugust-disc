@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/8ugust-disc/static/css/main.e9ca22c9.css",
-    "main.js": "/8ugust-disc/static/js/main.775556ee.js",
+    "main.css": "/8ugust-disc/static/css/main.40f8316c.css",
+    "main.js": "/8ugust-disc/static/js/main.33bb4f4b.js",
     "static/media/check.png": "/8ugust-disc/static/media/check.1c962dcb414f06d9d7f8.png",
     "static/media/definition.png": "/8ugust-disc/static/media/definition.c695f1f5c6ea432f49be.png",
     "static/media/logo_text.png": "/8ugust-disc/static/media/logo_text.653503aaa95303b7fb66.png",
@@ -11,11 +11,11 @@
     "static/media/loading.png": "/8ugust-disc/static/media/loading.f5fc7b3b670317923274.png",
     "static/media/brain.png": "/8ugust-disc/static/media/brain.a361fbbb4cccf44c737a.png",
     "index.html": "/8ugust-disc/index.html",
-    "main.e9ca22c9.css.map": "/8ugust-disc/static/css/main.e9ca22c9.css.map",
-    "main.775556ee.js.map": "/8ugust-disc/static/js/main.775556ee.js.map"
+    "main.40f8316c.css.map": "/8ugust-disc/static/css/main.40f8316c.css.map",
+    "main.33bb4f4b.js.map": "/8ugust-disc/static/js/main.33bb4f4b.js.map"
   },
   "entrypoints": [
-    "static/css/main.e9ca22c9.css",
-    "static/js/main.775556ee.js"
+    "static/css/main.40f8316c.css",
+    "static/js/main.33bb4f4b.js"
   ]
 }
