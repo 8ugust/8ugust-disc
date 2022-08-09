@@ -92,23 +92,24 @@ function Result(props) {
 					<div className={styles.percent_div}>
 						<div className={styles.percent_div_inner}>
 							{Object.keys(result).length !== 0 ? result.Score.map((item, idx) => {
-								const caption_arr = [null, null, null];
-								if (idx === 0) {caption_arr[0] = '주도(Dominance)'; caption_arr[1] = Math.round((result.Result.D + 27)/54*100, 0); caption_arr[3]= '#FF6565';}
-								if (idx === 1) {caption_arr[0] = '사교(Influence)'; caption_arr[1] = Math.round((result.Result.I + 25)/53*100, 0); caption_arr[3]= '#ECC774';}
-								if (idx === 2) {caption_arr[0] = '안정(Steadiness)'; caption_arr[1] = Math.round((result.Result.S + 27)/53*100, 0); caption_arr[3]= '#93ADDD';}
-								if (idx === 3) {caption_arr[0] = '신중(Compliance)'; caption_arr[1] = Math.round((result.Result.C + 26)/50*100, 0); caption_arr[3]= '#8DE389';}
+								const caption_arr = [null, null, null, null, null];
+								if (idx === 0) {caption_arr[0] = '주도성 (Dominance)'; caption_arr[1] = 54; caption_arr[2] = result.Result.D + 27; caption_arr[3] = (result.Result.D + 27)/54*100; caption_arr[4]= '#FF6565';}
+								if (idx === 1) {caption_arr[0] = '사교성 (Influence)'; caption_arr[1] = 53; caption_arr[2] = result.Result.I + 25; caption_arr[3] = (result.Result.I + 25)/53*100; caption_arr[4]= '#ECC774';}
+								if (idx === 2) {caption_arr[0] = '안정성 (Steadiness)'; caption_arr[1] = 53; caption_arr[2] = result.Result.S + 27; caption_arr[3] = (result.Result.S + 27)/53*100; caption_arr[4]= '#93ADDD';}
+								if (idx === 3) {caption_arr[0] = '신중성 (Compliance)'; caption_arr[1] = 50; caption_arr[2] = result.Result.C + 26; caption_arr[3] = (result.Result.C + 26)/50*100; caption_arr[4]= '#8DE389';}
 
 								return (
 									<div key={idx}>
 										<div className={idx !== 3 ? styles.percent_content_y : styles.percent_content_n}>
 											<div className={styles.percent_caption}>{caption_arr[0]}</div>
 											<div className={styles.percent_bar_warp}>
-												<div className={styles.percentage}>0%</div>
+												<div className={styles.percentage}>{caption_arr[2]}점</div>
 												<div className={styles.percent_bar}>
-													<div style={{width:caption_arr[1]+'%', backgroundColor:caption_arr[3]}}></div>
+													<div style={{width:caption_arr[3]+'%', backgroundColor:caption_arr[4]}}></div>
 												</div>
-												<div className={styles.percentage} style={{color:caption_arr[3]}}>{caption_arr[1]}%</div>
+												<div className={styles.percentage}>{caption_arr[1]}점</div>
 											</div>
+											<div style={{color:caption_arr[4], paddingLeft:caption_arr[3]+'%', fontWeight:600, fontSize:'0.8em'}}>{Math.round(caption_arr[3], 0)}%</div>
 										</div>
 									</div>
 								);

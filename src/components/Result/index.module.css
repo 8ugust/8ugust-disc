@@ -70,6 +70,12 @@
 	z-index: 5;
 }
 
+@media(min-width:500px) {
+	.percent_div {
+		padding-top: 85px;
+	}
+}
+
 .percent_div_inner {
 	border: 1px solid #dddfe2;
 	background-color: white;
@@ -98,7 +104,6 @@
 
 .percent_bar_warp {
 	justify-content: space-between;
-	padding-bottom: 10px;
 	align-items: center;
 	flex-direction: row;
 	display: flex;
