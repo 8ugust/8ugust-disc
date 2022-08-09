@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/8ugust-disc/static/css/main.40f8316c.css",
-    "main.js": "/8ugust-disc/static/js/main.33bb4f4b.js",
+    "main.css": "/8ugust-disc/static/css/main.21cd2768.css",
+    "main.js": "/8ugust-disc/static/js/main.9bad81ef.js",
     "static/media/check.png": "/8ugust-disc/static/media/check.1c962dcb414f06d9d7f8.png",
-    "static/media/definition.png": "/8ugust-disc/static/media/definition.c695f1f5c6ea432f49be.png",
-    "static/media/logo_text.png": "/8ugust-disc/static/media/logo_text.653503aaa95303b7fb66.png",
+    "static/media/definition.png": "/8ugust-disc/static/media/definition.8a79a808323d7c700490.png",
     "static/media/time.png": "/8ugust-disc/static/media/time.c68fc13bbedcd6c84d8c.png",
     "static/media/check_best.png": "/8ugust-disc/static/media/check_best.03a7dd6e9211ab2f763d.png",
     "static/media/check_wrst.png": "/8ugust-disc/static/media/check_wrst.88685aeac52c866fc4ab.png",
-    "static/media/loading.png": "/8ugust-disc/static/media/loading.f5fc7b3b670317923274.png",
+    "static/media/logo_text.png": "/8ugust-disc/static/media/logo_text.9b3ce6a7de20b28a45bc.png",
+    "static/media/logo.png": "/8ugust-disc/static/media/logo.a3cb52fddd07702249c8.png",
     "static/media/brain.png": "/8ugust-disc/static/media/brain.a361fbbb4cccf44c737a.png",
     "index.html": "/8ugust-disc/index.html",
-    "main.40f8316c.css.map": "/8ugust-disc/static/css/main.40f8316c.css.map",
-    "main.33bb4f4b.js.map": "/8ugust-disc/static/js/main.33bb4f4b.js.map"
+    "main.21cd2768.css.map": "/8ugust-disc/static/css/main.21cd2768.css.map",
+    "main.9bad81ef.js.map": "/8ugust-disc/static/js/main.9bad81ef.js.map"
   },
   "entrypoints": [
-    "static/css/main.40f8316c.css",
-    "static/js/main.33bb4f4b.js"
+    "static/css/main.21cd2768.css",
+    "static/js/main.9bad81ef.js"
   ]
 }
