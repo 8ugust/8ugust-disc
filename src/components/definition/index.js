@@ -18,7 +18,7 @@ function Definition(props) {
 					미국 콜롬비아대학 심리학교수 Willam Mouston Marston 박사의 연구 결과에 따르면, 
 					인간은 자신이 처한 환경, 그리고 그 환경 속에서 본인을 어떻게 인식하느냐에 따라
 					4개의 형태로 나뉘어 행동을 하게 된다고 합니다. 박사는 이러한 인식을 축으로 인간의 행동을
-					각각 주도형(Dominance), 사교형(Influence), 안정형(Steadiness), 신중형(Conscientiousness) 으로 나누었습니다.
+					각각 주도형(Dominance), 사교형(Influence), 안정형(Steadiness), 신중형(Compliance) 으로 나누었습니다.
 				</p>
 				<p>
 					테스트는 위의 4개 영역에 대해 여러분의 유형을 진단합니다. 각 영역에 대한 점수를 측정하고, 결과로 나타난

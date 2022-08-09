@@ -1,6 +1,7 @@
 import './App.css';
 import React from 'react';
 import menu_icon from './img/menu.png';
+import logo from './img/logo.png'
 import logo_text from './img/logo_text.png';
 import Gnb from './components/gnb';
 import Definition from './components/definition';
@@ -71,6 +72,7 @@ function App() {
 		<div className='pc-left'></div>
 		<div className="App">
 			<div className='navbar'>
+				<img src={logo} className='logo' alt='personality_behaviors'></img>
 				<img src={logo_text} className='logo_text' alt='personality_behaviors'></img>
 				<img src={menu_icon} className='menu_icon' alt='menu_icon' onClick={fnIsGnb}></img>
 			</div>

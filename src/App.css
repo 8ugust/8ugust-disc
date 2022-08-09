@@ -36,12 +36,17 @@
     top: 0;
 }
 
-.App .navbar .logo_text {
+.App .navbar .logo {
     position: relative;
     height: 50px;
     width: auto;
     left: 5px;
     top: 5px;
+}
+
+.App .navbar .logo_text {
+    position: relative;
+    padding-top: 5px;
 }
 
 .App .navbar .menu_icon {

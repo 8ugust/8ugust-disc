@@ -54,10 +54,7 @@ function Result(props) {
 				if (idx === 2 && (jtem[1] <= inner.Result.S && inner.Result.S <= jtem[0])) score.push(['S', jdx + 1]);
 				if (idx === 3 && (jtem[1] <= inner.Result.C && inner.Result.C <= jtem[0])) score.push(['C', jdx + 1]);
 			})
-		})
-
-		score.sort((a, b) => {return b[1] - a[1]});
-		inner.Score = score;
+		}); inner.Score = score;
 
 		setResult(inner);
 		setCalControl(false);
@@ -69,13 +66,14 @@ function Result(props) {
 
 	const fnTypeStyles = (type) => {
 		if (Object.keys(result).length === 0) return null;
-		const vScore = result.Score[0][0];
+		const vScore = Object.keys(result.Result);
+		vScore.sort((a,b) => {return result.Result[b] - result.Result[a]});
 
 		if (type === 'polygon') {
-			if (vScore === 'D') return styles.polygon_D;
-			if (vScore === 'I') return styles.polygon_I;
-			if (vScore === 'S') return styles.polygon_S;
-			if (vScore === 'C') return styles.polygon_C;
+			if (vScore[0] === 'D') return '#FF6565';
+			if (vScore[0] === 'I') return '#ECC774';
+			if (vScore[0] === 'S') return '#93ADDD';
+			if (vScore[0] === 'C') return '#8DE389';
 		}
 
 	}
@@ -88,26 +86,29 @@ function Result(props) {
 				<div className={styles.type_nm}>타입명</div>
 				<div className={styles.type_cd}>CODE</div>
 				<div className={styles.percent_wrap}>
-					<svg className={styles.percent_bg} viewBox='0 0 100 200'>
-						<polygon className={fnTypeStyles('polygon')} points='0,5 10,0 40,15 100,0 100,95 90,100 60,85 0,100'/>
+					<svg className={styles.percent_bg} viewBox='0 0 100 100'>
+						<polygon style={{fill:fnTypeStyles('polygon')}} points='0,5 10,0 40,15 100,0 100,95 90,100 60,85 0,100'/>
 					</svg>
 					<div className={styles.percent_div}>
 						<div className={styles.percent_div_inner}>
 							{Object.keys(result).length !== 0 ? result.Score.map((item, idx) => {
-								const caption_nm = [null, null];
-								[0, 1, 2, 3].map(val => {
-									//여기부터 작성
-								})
-								if (idx === 0) caption_nm[0] = 'D';
-								if (idx === 1) caption_nm[0] = 'I';
-								if (idx === 2) caption_nm[0] = 'S';
-								if (idx === 3) caption_nm[0] = 'C';
-
+								const caption_arr = [null, null, null];
+								if (idx === 0) {caption_arr[0] = '주도(Dominance)'; caption_arr[1] = Math.round((result.Result.D + 27)/54*100, 0); caption_arr[3]= '#FF6565';}
+								if (idx === 1) {caption_arr[0] = '사교(Influence)'; caption_arr[1] = Math.round((result.Result.I + 25)/53*100, 0); caption_arr[3]= '#ECC774';}
+								if (idx === 2) {caption_arr[0] = '안정(Steadiness)'; caption_arr[1] = Math.round((result.Result.S + 27)/53*100, 0); caption_arr[3]= '#93ADDD';}
+								if (idx === 3) {caption_arr[0] = '신중(Compliance)'; caption_arr[1] = Math.round((result.Result.C + 26)/50*100, 0); caption_arr[3]= '#8DE389';}
 
 								return (
 									<div key={idx}>
 										<div className={idx !== 3 ? styles.percent_content_y : styles.percent_content_n}>
-											<div className={styles.caption}>{caption_nm}</div>
+											<div className={styles.percent_caption}>{caption_arr[0]}</div>
+											<div className={styles.percent_bar_warp}>
+												<div className={styles.percentage}>0%</div>
+												<div className={styles.percent_bar}>
+													<div style={{width:caption_arr[1]+'%', backgroundColor:caption_arr[3]}}></div>
+												</div>
+												<div className={styles.percentage} style={{color:caption_arr[3]}}>{caption_arr[1]}%</div>
+											</div>
 										</div>
 									</div>
 								);

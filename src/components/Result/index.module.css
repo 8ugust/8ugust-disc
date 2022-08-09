@@ -71,6 +71,7 @@
 }
 
 .percent_div_inner {
+	border: 1px solid #dddfe2;
 	background-color: white;
 	flex-direction: column;
 	border-radius: 20px;
@@ -80,14 +81,42 @@
 
 .percent_content_y {
 	border-bottom: 1px solid #dddfe2;
-	padding: 20px;
+	padding: 10px;
 }
 
 .percent_content_n {
-	padding: 20px;
+	padding: 10px;
 }
 
-.polygon_D {fill: #FFA3A3;}
-.polygon_I {fill: #FFFFAB;}
-.polygon_S {fill: #93ADDD;}
-.polygon_C {fill: #B4FABC;}
+.percent_caption {
+	padding-bottom: 10px;
+	text-align: center;
+	color: #51596a;
+	font-weight: 600;
+	font-size: 1em;
+}
+
+.percent_bar_warp {
+	justify-content: space-between;
+	padding-bottom: 10px;
+	align-items: center;
+	flex-direction: row;
+	display: flex;
+}
+
+.percentage {
+	padding-right: 10px;
+	padding-left: 10px;
+	color: #51596a;
+	font-weight: 600;
+	font-size: 1em;
+}
+
+.percent_bar {
+	background-color: #f5f5f5;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-grow: 1;
+    height: 10px;
+}
