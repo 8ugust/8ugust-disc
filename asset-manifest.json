@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/8ugust-disc/static/css/main.21cd2768.css",
-    "main.js": "/8ugust-disc/static/js/main.9bad81ef.js",
+    "main.css": "/8ugust-disc/static/css/main.9ac1afc5.css",
+    "main.js": "/8ugust-disc/static/js/main.b81a9b42.js",
     "static/media/check.png": "/8ugust-disc/static/media/check.1c962dcb414f06d9d7f8.png",
     "static/media/definition.png": "/8ugust-disc/static/media/definition.8a79a808323d7c700490.png",
     "static/media/time.png": "/8ugust-disc/static/media/time.c68fc13bbedcd6c84d8c.png",
@@ -11,11 +11,11 @@
     "static/media/logo.png": "/8ugust-disc/static/media/logo.a3cb52fddd07702249c8.png",
     "static/media/brain.png": "/8ugust-disc/static/media/brain.a361fbbb4cccf44c737a.png",
     "index.html": "/8ugust-disc/index.html",
-    "main.21cd2768.css.map": "/8ugust-disc/static/css/main.21cd2768.css.map",
-    "main.9bad81ef.js.map": "/8ugust-disc/static/js/main.9bad81ef.js.map"
+    "main.9ac1afc5.css.map": "/8ugust-disc/static/css/main.9ac1afc5.css.map",
+    "main.b81a9b42.js.map": "/8ugust-disc/static/js/main.b81a9b42.js.map"
   },
   "entrypoints": [
-    "static/css/main.21cd2768.css",
-    "static/js/main.9bad81ef.js"
+    "static/css/main.9ac1afc5.css",
+    "static/js/main.b81a9b42.js"
   ]
 }
