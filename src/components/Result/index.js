@@ -3,10 +3,11 @@ import styles from './index.module.css';
 
 function Result(props) {
     
-	const [calControl, setCalControl] = React.useState(true);
+	const [calControl_1, setcalControl_1] = React.useState(true);
+	const [calControl_2, setcalControl_2] = React.useState(true);
 	const [result, setResult] = React.useState({});
 
-    if (props.status === 2 && calControl === true) {
+    if (props.status === 2 && calControl_1 === true) {
 		const inner = {
 			'Best':{'D':0, 'I':0, 'S':0, 'C':0, 'N':0},
 			'Wrst':{'D':0, 'I':0, 'S':0, 'C':0, 'N':0},
@@ -15,7 +16,6 @@ function Result(props) {
 			'Type' : null
 		};
 
-		console.log(props.befCalAnswer);
         props.befCalAnswer.forEach((item, idx) => {
             props.questions[idx].forEach((jtem, jdx) => {
                 if (jdx === item[0][0]) {
@@ -50,27 +50,52 @@ function Result(props) {
 		]; const score = [];
 		division.forEach((item, idx) => {
 			item.forEach((jtem, jdx) => {
-				if (idx === 0 && (jtem[1] <= inner.Result.D && inner.Result.D <= jtem[0])) score.push(['D', jdx + 1, inner.Result.D]);
-				if (idx === 1 && (jtem[1] <= inner.Result.I && inner.Result.I <= jtem[0])) score.push(['I', jdx + 1, inner.Result.I]);
-				if (idx === 2 && (jtem[1] <= inner.Result.S && inner.Result.S <= jtem[0])) score.push(['S', jdx + 1, inner.Result.S]);
-				if (idx === 3 && (jtem[1] <= inner.Result.C && inner.Result.C <= jtem[0])) score.push(['C', jdx + 1, inner.Result.C]);
+				if (idx === 0 && (jtem[1] <= inner.Result.D && inner.Result.D <= jtem[0])) score.push(['D', 7-jdx, inner.Result.D]);
+				if (idx === 1 && (jtem[1] <= inner.Result.I && inner.Result.I <= jtem[0])) score.push(['I', 7-jdx, inner.Result.I]);
+				if (idx === 2 && (jtem[1] <= inner.Result.S && inner.Result.S <= jtem[0])) score.push(['S', 7-jdx, inner.Result.S]);
+				if (idx === 3 && (jtem[1] <= inner.Result.C && inner.Result.C <= jtem[0])) score.push(['C', 7-jdx, inner.Result.C]);
 			})
 		}); 
 		
 		score.sort((a, b) => {
-			if (b[1] === a[1]) {
-				return b[2] - a[2]
-			}
+			if (b[1] === a[1]) {return b[2] - a[2]}
 			return b[1] - a[1]
 		});
 		inner.Score = score;
 
 		setResult(inner);
-		setCalControl(false);
+		setcalControl_1(false);
     }
 
-	if (calControl === false) {
+	// D - [DSIC / DSCI]
+	// 	- Developer : DICS / DCIS
+	// 	- ResultedO : DISC
+	// 	- Inspirate : DICS
+	// 	- Creative	: DCSI
+
+	// I - [ICSD]
+	// - promoter	: IDSC / IDCS
+	// - persuader	: IDCS
+	// - counselor	: ISDC / ISCD
+	// - appraiser	: ICDS
+
+	// S - [SDIC / SIDC]
+	// - specialist	: SCID
+	// - achiever	: SDCI
+	// - agent		: SICD
+	// - investigate: SCDI 
+
+	// C - [CDIS / CIDS / CSID]
+	// - objectTink	: CSDI / CDSI
+	// - perfection	: CSDI
+	// - practition	: CISD
+
+	if (calControl_1 === false) {
+		
 		console.log(result.Score);
+
+
+
 	}
 
 	const fnTypeStyles = (type) => {

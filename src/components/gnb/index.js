@@ -9,11 +9,15 @@ function Gnb(props) {
     }
 
     const tempTest = () => {
-        const testArr = new Array(28).fill([[null, null]]);
-        testArr.forEach(item => {
-            item[0][0] = Math.ceil(Math.random()*4) - 1;
-            item[0][1] = Math.ceil(Math.random()*4) - 1;
-        })
+        const testArr = [];
+        while (true) {
+            const temp = [];
+            temp.push(Math.ceil(Math.random()*4) - 1);
+            temp.push(Math.ceil(Math.random()*4) - 1);
+
+            testArr.push([temp]);
+            if (testArr.length === 28) break;
+        }
 
         props.setBefCalAnswer(testArr);
         props.setStatus(2);
