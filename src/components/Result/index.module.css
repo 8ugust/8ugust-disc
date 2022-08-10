@@ -37,7 +37,6 @@
 
 /* #FF6565, #FFFFAB, #93ADDD, #77F586*/
 .type_cd {
-	padding-bottom: 30px; 
 	font-size: 1.7em; 
 	font-weight: 600; 
 	color: #51596a; 
@@ -66,13 +65,13 @@
 	padding-right: 10px;
 	padding-left: 10px;
 	position: relative;
-	padding-top: 20%;
+	padding-top: 10%;
 	z-index: 5;
 }
 
 @media(min-width:500px) {
 	.percent_div {
-		padding-top: 85px;
+		padding-top: 23%;
 	}
 }
 
