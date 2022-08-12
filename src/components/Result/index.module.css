@@ -141,9 +141,8 @@
 	padding-left: 20px;
 }
 
-.summary {
-	border-left: 3px solid #33a474;
-    padding-left: 30px;
+.result_desc_inner p {
+    font-size: 1.125em;
 	line-height: 1.8;
-	color: #51596a;
+    color: #51596a;
 }

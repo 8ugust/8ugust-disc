@@ -212,8 +212,9 @@ function Result(props) {
 				<div className={styles.result_desc_inner}>
 					<div className={styles.type_cd}>행동유형 : {discTypeNm}</div>
 					<div style={{paddingTop:'20px', paddingBottom:'20px'}}>
-							<p className={styles.summary}>동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세 무궁화 삼천리 화려강산 대한사람 대한으로 길이 보전하세</p>
+						<p style={{borderLeft:'3px solid ' + fnTypeStyles('color'), paddingLeft:'20px'}}>이곳에는 15가지 유형 결과로 도출된 한 가지 유형에 대한 짧은 요약을 적을겁니다. 가령 개발자는 이러저러얼레벌레한다 이런 식으로요.</p>
 					</div>
+					<p>속도가 빠르고 업무 중심적으로 사고하기 때문에 주도적이고 단호한 행동 경향을 보입니다. 속전속결을 좋아하기 때문에 업무를 계획하고 그대로 소화하고자 하는 경향이 있으며, 이러한 방식을 유지하기 위해 혼자서 일 하는 것을 선호합니다.</p>
 				</div>
 			</div>}
         </div>
