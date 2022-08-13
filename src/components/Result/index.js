@@ -48,7 +48,7 @@ function Result(props) {
 			[[27, 6], [5, 0], [-1, -4], [-5, -7], [-8, -11], [-12, -14], [-15, -27]],
 			[[28, 8], [7, 6], [5, 3], [2, 1], [0, -2], [-3, -5], [-6, -26]],
 			[[26, 12], [11, 9], [8, 6], [5, 3], [2, 0], [-1, -4], [-5, -27]],
-			[[24, 16], [5, 3], [2, 0], [-1, -2], [-3, -5], [-6, -8], [-9, -26]]
+			[[24, 16], [15, 3], [2, 0], [-1, -2], [-3, -5], [-6, -8], [-9, -26]]
 		]; 
 		division_1.forEach((item, idx) => {
 			item.forEach((jtem, jdx) => {
@@ -90,12 +90,13 @@ function Result(props) {
 			[[-27, -23], [-26, -19], [-27, -19], [-26, -21]]	// 1
 		];
 
+		console.log(score);
 		division_2.forEach((item, idx) => {
 			item.forEach((jtem, jdx) => {
-				if (jdx === 0 && (jtem[0] <= score[0][2] && score[0][2] <= jtem[1])) score[0].push(28-idx);	// D
-				if (jdx === 1 && (jtem[0] <= score[1][2] && score[1][2] <= jtem[1])) score[1].push(28-idx);	// I
-				if (jdx === 2 && (jtem[0] <= score[2][2] && score[2][2] <= jtem[1])) score[2].push(28-idx);	// S
-				if (jdx === 3 && (jtem[0] <= score[3][2] && score[3][2] <= jtem[1])) score[3].push(28-idx);	// C
+				if (jdx === 0 && (jtem[0] !== null) && (jtem[0] <= score[0][2] && score[0][2] <= jtem[1])) score[0].push(28-idx);	// D
+				if (jdx === 1 && (jtem[0] !== null) && (jtem[0] <= score[1][2] && score[1][2] <= jtem[1])) score[1].push(28-idx);	// I
+				if (jdx === 2 && (jtem[0] !== null) && (jtem[0] <= score[2][2] && score[2][2] <= jtem[1])) score[2].push(28-idx);	// S
+				if (jdx === 3 && (jtem[0] !== null) && (jtem[0] <= score[3][2] && score[3][2] <= jtem[1])) score[3].push(28-idx);	// C
 			})
 		});
 		
