@@ -43,6 +43,88 @@ function App() {
         [['공손한', 'C', 'C'], ['새롭게 시작하는', 'D', 'D'], ['낙천적인', 'I', 'I'], ['도움을 주려하는', 'S', 'S']]
     ];
 
+	const behaviorType = {
+		"D" : [
+			"타고난 리더. 주도적으로 듣고 말하며 성취 욕구를 통해 성장하는 자. 도전 정신을 통해 권위와 권력을 쟁취하는 자.",
+			"주도형(Dominance)를 강점으로 지닌 사람들은 주도적이면서 성취욕구가 높습니다. 삶의 페이스가 빠른 편에 속하며, 이러한 성향 때문에 의사소통 상황에서 빠르고 간단명료하게 말하는 특성이 있습니다. 지금 당장 해야하는 것에 집중하기에 생각보다 몸이 먼저 나가는 경향을 보이며, 듣는 상황에서 답답함을 느끼면 개입하여 상황 및 내용을 정리해주곤 합니다. 업무 상황에 놓일 땐 '그래서 나는 뭐 해?' 와 같은 말을 외우며 자신이 할 일을 찾아 나섭니다.",
+			"업무에 대한 본인의 결정권이 극대화되는 환경을 선호합니다. 업무 과정보단 결과를 지향하고, 빠른 결과를 보기 위해 속도내어 업무를 봅니다. 또한 결과에 대한 보상을 중요시하기 때문에 직장을 고를 때 워라벨보단 연봉 그 자체에 대한 중요도를 더욱 높게 평가합니다. 반대로 통제권이 없거나 타인의 감독을 받는 환경을 회피하고자 합니다. 또한 본인에 대한 평가가 부드럽가나 약하다는 인식이 드는 것을 싫어합니다. 반복적이고 예측이 가능한 업무를 보는 환경을 꺼려합니다.",
+		],
+		"I" : [
+			"타고난 공감능력. 자신의 생각과 감정을 타인과 공유하며, 설득력 있고 정치적인 감각으로 유머러스한 자. 밝고 활기차며 긍정적인 면모를 지닌 자.",
+			"",
+			"",
+			""
+		],
+		"S" : [
+			"타고난 계획주의자. 안정적인 상황을 선호하고 평화로움을 추구하는 자. 돌발상황에서 발생하는 스트레스를 피하고자 계획을 추구하는 자.",
+			"",
+			"",
+			""
+		],
+		"C" : [
+			"타고난 신중함. 규칙 및 규범을 준수하고 정확한 정보 파악에 힘쓰는 자. 실수하지 않고자 자신에게 또한 엄격한 잣대를 요구하는 자.",
+			"",
+			"",
+			""
+		],
+
+		"결과지향자" : [
+			"HI"
+		],
+
+		"성취자" : [
+			"HI"
+		],
+
+		"개척가" : [
+			"개척가는 업무중심의 사고를 바탕으로 효율과 원리원칙을 중요시하며 명확한 근거로 똑부러지는 행동 경향을 보입니다.",
+			"개척가는 주도형(Dominance)의 강점에 신중하고 원리원칙을 중요시하는 사고가 더해진 성향을 가집니다. 따라서 논리적이고 과학적이어야하며, 무엇이든 납득이 되어야만 하고, 그렇지 못할 경우 비판적인 행동 경향을 보입니다.",
+			"개척가는 타인에게 겉모습과 말투가 굉장히 차갑다는 인상을 남깁니다. 이는 타인에게 냉정한 행동을 보인다는 의미이기도 하지만, 반대로 말하자면 뒤끝이 없고 시원시원하게 행동한다는 의미이기도 합니다. 때문에 어느정도 대화를 나눠본 상대는 당신을 '카리스마있고 멋지다' 라고 표현하기도 합니다.",
+			"개척가는 굉장히 강력한 승부욕을 지니고 있습니다. 따라서 업무중심적이며 워커홀릭 경향을 보이기도 합니다. 목표 달성을 중요하게 여기며 보상이 확실한 경우 업무를 더욱 잘 해내는 편입니다. 대중적인 강사 또는 사업가, CEO, 전문가 기질을 타고난 마이스터와 같은 이미지를 가지고 있습니다."
+		],
+
+		"정치가" : [
+			"HI"
+		],
+
+		"카운셀러" : [
+			"HI"
+		],
+		
+		"협상가" : [
+			"HI"
+		],
+		
+		"디자이너" : [
+			"HI"
+		],
+
+		"상담가" : [
+			"HI"
+		],
+		
+		"관리자" : [
+			"HI"
+		],
+
+		"설계자" : [
+			"HI"
+		],
+
+		"평론가" : [
+			"HI"
+		],
+		
+		"완벽주의자" : [
+			"HI"
+		],
+
+		"타입명" : [
+			"", "", "", ""
+		]
+		
+	};
+
 	// GNB Menu
 	const [isGnb, setIsGnb] = React.useState(false);
 	const fnIsGnb = () => {
@@ -79,7 +161,7 @@ function App() {
 			<div className='content-body'>
 				<Definition status={status} setStatus={setStatus}/>
 				<Test status={status} setStatus={setStatus} setBefCalAnswer={setBefCalAnswer} questions={questions} isGnb={isGnb} fnIsWait={fnIsWait}/>
-				<Result status={status} setStatus={setStatus} befCalAnswer={befCalAnswer} questions={questions}/>
+				<Result status={status} setStatus={setStatus} befCalAnswer={befCalAnswer} questions={questions} behaviorType={behaviorType}/>
 			</div>
 			<Gnb fnIsGnb={fnIsGnb} isGnb={isGnb} status={status} setStatus={setStatus} fnIsWait={fnIsWait} setBefCalAnswer={setBefCalAnswer}/>
 			<Wait isWait={isWait} fnIsWait={fnIsWait} status={status} setStatus={setStatus}/>

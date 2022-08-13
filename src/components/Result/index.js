@@ -111,21 +111,21 @@ function Result(props) {
 
 	if (calControl_1 === false && calControl_2 === true) {
 		const type = {
-			'개발자' : ['DCIS'],
-			'결과지향자' : ['DISC'],
-			'직감자' : ['DICS'],
-			'창조자' : ['DCSI', 'DSCI', 'DSIC'],
-			'촉진자' : ['IDSC'],
-			'설득자' : ['IDCS'],
+			'결과지향자' : ['DISC', 'DICS'],
+			'성취자' : ['DSCI', 'DSIC'],
+			'개척가' : ['DCIS', 'DCSI'],
+
+			'정치가' : ['IDSC', 'IDCS'],
 			'카운셀러' : ['ISDC', 'ISCD'],
-			'평가자' : ['ICDS', 'ICSD'],
-			'전문가' : ['SCID'],
-			'성취자' : ['SDCI', 'SDIC'],
-			'중개자' : ['SICD', 'SIDC'],
-			'탐구자' : ['SCDI'],
-			'객관주의자' : ['CDSI', 'CDIS'],
-			'완벽주의자' : ['CSDI', 'CSID'],
-			'실천자': ['CISD', 'CIDS']
+			'협상가' : ['ICDS', 'ICSD'],
+			
+			'디자이너' : ['SDCI', 'SDIC'],
+			'상담가' : ['SICD', 'SIDC'],
+			'관리자' : ['SCID', 'SCDI'],
+			
+			'설계자' : ['CDSI', 'CDIS'],
+			'평론가': ['CISD', 'CIDS'],
+			'완벽주의자' : ['CSDI', 'CSID']
 		}
 
 		const code = result.Score.map(item => item[0]).join('');
@@ -142,6 +142,34 @@ function Result(props) {
 	const fnTypeStyles = (type, data) => {
 		if (Object.keys(result).length === 0) return null;
 		const vScore = result.Score;
+
+		if (type ==='behavior_1') {
+			if (vScore[0][0] === 'D') return '주도성(Dominance)';
+			if (vScore[0][0] === 'I') return '사교성(Influence)';
+			if (vScore[0][0] === 'S') return '안정성(Steadiness)';
+			if (vScore[0][0] === 'C') return '신중성(Compliance)';
+		}
+
+		if (type ==='behavior_2') {
+			if (vScore[0][0] === 'D') return props.behaviorType.D[0];
+			if (vScore[0][0] === 'I') return props.behaviorType.I[0];
+			if (vScore[0][0] === 'S') return props.behaviorType.S[0];
+			if (vScore[0][0] === 'C') return props.behaviorType.C[0];
+		}
+
+		if (type ==='behavior_3_1') {
+			if (vScore[0][0] === 'D') return props.behaviorType.D[1];
+			if (vScore[0][0] === 'I') return props.behaviorType.I[1];
+			if (vScore[0][0] === 'S') return props.behaviorType.S[1];
+			if (vScore[0][0] === 'C') return props.behaviorType.C[1];
+		}
+
+		if (type ==='behavior_3_2') {
+			if (vScore[0][0] === 'D') return props.behaviorType.D[2];
+			if (vScore[0][0] === 'I') return props.behaviorType.I[2];
+			if (vScore[0][0] === 'S') return props.behaviorType.S[2];
+			if (vScore[0][0] === 'C') return props.behaviorType.C[2];
+		}
 
 		if (type === 'color') {
 			if (vScore[0][0] === 'D') return '#FF6565';
@@ -171,10 +199,12 @@ function Result(props) {
 				<div className={styles.type_nm}>{discTypeNm}</div>
 				<div className={styles.type_cd} style={{color:fnTypeStyles('color')}}>{discTypeCd}</div>
 				<div className={styles.percent_wrap}>
-					<svg className={styles.percent_bg} viewBox='0 0 100 120'>
-						<polygon style={{fill:fnTypeStyles('color')}} points='0,5 10,0 40,15 100,0 100,115 90,120 60,105 0,120'/>
-					</svg>
-					<div className={styles.percent_div}>
+					{window.innerWidth >= 500 ? null :
+						<svg className={styles.percent_bg} viewBox='0 0 100 120'>
+							<polygon style={{fill:fnTypeStyles('color')}} points='0,5 10,0 40,15 100,0 100,115 90,120 60,105 0,120'/>
+						</svg>
+					}
+					<div className={styles.percent_div} style={window.innerWidth >= 500 ? {backgroundColor:fnTypeStyles('color')} : null}>
 						<div className={styles.percent_div_inner}>
 							{Object.keys(result).length !== 0 ? result.Score.map((item, idx) => {
 								const idx_D = result.Score.map(item => item[0]).indexOf('D');
@@ -210,11 +240,20 @@ function Result(props) {
 			</div>
 			{Object.keys(result).length === 0 ? null : <div className={styles.result_desc_wrap}>
 				<div className={styles.result_desc_inner}>
-					<div className={styles.type_cd}>행동유형 : {discTypeNm}</div>
-					<div style={{paddingTop:'20px', paddingBottom:'20px'}}>
-						<p style={{borderLeft:'3px solid ' + fnTypeStyles('color'), paddingLeft:'20px'}}>이곳에는 15가지 유형 결과로 도출된 한 가지 유형에 대한 짧은 요약을 적을겁니다. 가령 개발자는 이러저러얼레벌레한다 이런 식으로요.</p>
+					<div className={styles.type_cd} style={{fontSize:'1.4em'}}>행동강점 : {fnTypeStyles('behavior_1')}</div>
+					<div style={{paddingTop:'10px', paddingBottom:'10px'}}>
+						<p style={{borderLeft:'3px solid ' + fnTypeStyles('color'), paddingLeft:'20px'}}>{fnTypeStyles('behavior_2')}</p>
 					</div>
-					<p>속도가 빠르고 업무 중심적으로 사고하기 때문에 주도적이고 단호한 행동 경향을 보입니다. 속전속결을 좋아하기 때문에 업무를 계획하고 그대로 소화하고자 하는 경향이 있으며, 이러한 방식을 유지하기 위해 혼자서 일 하는 것을 선호합니다.</p>
+					<p style={{margin:0, paddingBottom:'30px'}}>{fnTypeStyles('behavior_3_1')}</p>
+					<p style={{margin:0, paddingBottom:'30px'}}>{fnTypeStyles('behavior_3_2')}</p>
+					<div className={styles.type_cd} style={{fontSize:'1.4em', paddingTop:'20px', paddingBottom:'20px'}}>행동패턴 : {discTypeNm} ({discTypeCd})</div>
+					<div className={styles.result_desc_middle} style={{backgroundColor:fnTypeStyles('color')}}>{props.behaviorType[discTypeNm][0]}</div>
+					<p style={{margin:0, paddingBottom:'30px'}}>{props.behaviorType[discTypeNm][1]}</p>
+					<p style={{margin:0, paddingBottom:'30px'}}>{props.behaviorType[discTypeNm][2]}</p>
+					<p style={{margin:0, paddingBottom:'30px'}}>{props.behaviorType[discTypeNm][3]}</p>
+					<div style={{display:'flex', justifyContent:'center', paddingBottom:'30px'}}>
+						<div className={styles.result_btn}>다시하기</div>
+					</div>
 				</div>
 			</div>}
         </div>

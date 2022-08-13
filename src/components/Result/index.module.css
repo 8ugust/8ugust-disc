@@ -49,6 +49,13 @@
 	bottom: 0;
 }
 
+@media (min-width:500px) {
+	.percent_wrap {
+		padding-bottom: 20px;
+		padding-top: 20px;
+	}
+}
+
 .percent_bg {
 	position: absolute;
 	width: 100%;
@@ -71,7 +78,7 @@
 
 @media(min-width:500px) {
 	.percent_div {
-		padding-top: 23%;
+		padding: 20px;
 	}
 }
 
@@ -136,6 +143,12 @@
 	width: 100%;
 }
 
+@media (min-width:500px) {
+	.result_desc_wrap {
+		padding-top: 20px;
+	}
+}
+
 .result_desc_inner {
 	padding-right: 20px;
 	padding-left: 20px;
@@ -145,4 +158,23 @@
     font-size: 1.125em;
 	line-height: 1.8;
     color: #51596a;
+}
+
+.result_desc_middle {
+    clip-path: polygon(0 6%,13% 2%,65% 0,100% 5%,100% 96%,86% 100%,54% 97%,25% 100%,0 97%,0 77%);
+    padding: 35px 30px 40px;
+    margin-bottom: 30px;
+    font-style: italic;
+	font-size: 1.125em;
+    line-height: 1.8;
+    color: #fff;
+}
+
+.result_btn {
+	padding: 20px 70px 20px 70px;
+    background-color: #6c4d7b;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 18px;
+    color: white;
 }
