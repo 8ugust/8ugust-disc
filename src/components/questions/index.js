@@ -48,7 +48,7 @@ function Questions (props) {
                 <div className={styles.quest_title}>
                     <div className={styles.col_1}>적합</div>
                     <div className={styles.col_2}></div>
-                    <div className={styles.col_3}>비적합</div>
+                    <div className={styles.col_3}>부적합</div>
                 </div>
                 {props.questions.map((item, jdx) => {
                     return(
