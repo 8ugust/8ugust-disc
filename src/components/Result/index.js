@@ -117,7 +117,7 @@ function Result(props) {
 			'개척가' : ['DCIS', 'DCSI'],
 
 			'정치가' : ['IDSC', 'IDCS'],
-			'카운셀러' : ['ISDC', 'ISCD'],
+			'헌신자' : ['ISDC', 'ISCD'],
 			'협상가' : ['ICDS', 'ICSD'],
 			
 			'디자이너' : ['SDCI', 'SDIC'],
@@ -125,8 +125,8 @@ function Result(props) {
 			'관리자' : ['SCID', 'SCDI'],
 			
 			'설계자' : ['CDSI', 'CDIS'],
-			'평론가': ['CISD', 'CIDS'],
-			'완벽주의자' : ['CSDI', 'CSID']
+			'작가': ['CISD', 'CIDS'],
+			'원칙주의자' : ['CSDI', 'CSID']
 		}
 
 		const code = result.Score.map(item => item[0]).join('');
