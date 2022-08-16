@@ -193,7 +193,7 @@ function App() {
 			<div className='navbar'>
 				<img src={logo} className='logo' alt='personality_behaviors'></img>
 				<img src={logo_text} className='logo_text' alt='personality_behaviors'></img>
-				<img src={menu_icon} className='menu_icon' alt='menu_icon' onClick={fnIsGnb}></img>
+				<img src={menu_icon} className='menu_icon' alt='menu_icon' onClick={fnIsGnb} style={{cursor:'pointer'}}></img>
 			</div>
 			<div className='content-body'>
 				<Definition status={status} setStatus={setStatus}/>

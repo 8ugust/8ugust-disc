@@ -54,11 +54,11 @@ function Questions (props) {
                     return(
                         <div key={jdx} className={styles.quest_row}>
                             <div className={styles.col_1}>
-                                <img className={props.answer[props.idx][0][1] === jdx ? styles.no_select : null} src={props.answer[props.idx][0][0] === jdx ? chk_best : chk_none} alt='chk_best' onClick={() => setChk('B', props.idx, jdx)} />
+                                <img className={props.answer[props.idx][0][1] === jdx ? styles.no_select : null} src={props.answer[props.idx][0][0] === jdx ? chk_best : chk_none} alt='chk_best' onClick={() => setChk('B', props.idx, jdx)} style={{cursor:'pointer'}}/>
                             </div>
                             <div className={styles.col_2}>{item[0]}</div>
                             <div className={styles.col_3}>
-                                <img className={props.answer[props.idx][0][0] === jdx ? styles.no_select : null} src={props.answer[props.idx][0][1] === jdx ? chk_wrst : chk_none} alt='chk_wrst' onClick={() => setChk('W', props.idx, jdx)} />
+                                <img className={props.answer[props.idx][0][0] === jdx ? styles.no_select : null} src={props.answer[props.idx][0][1] === jdx ? chk_wrst : chk_none} alt='chk_wrst' onClick={() => setChk('W', props.idx, jdx)} style={{cursor:'pointer'}}/>
                             </div>
                         </div>
                     )
