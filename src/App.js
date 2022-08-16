@@ -179,9 +179,11 @@ function App() {
 	// 3 - DISC Result Page
 	// 4 - DISC Definition Page
 	const [status, setStatus] = React.useState(1);
+	const [types, setTypes] = React.useState(null);
 
 	// Result Variable
 	const [befCalAnswer, setBefCalAnswer] = React.useState([]);
+	
 
 	return (
 		<>
@@ -197,7 +199,7 @@ function App() {
 				<Test status={status} setStatus={setStatus} setBefCalAnswer={setBefCalAnswer} questions={questions} isGnb={isGnb} fnIsWait={fnIsWait}/>
 				<Result status={status} setStatus={setStatus} befCalAnswer={befCalAnswer} questions={questions} behaviorType={behaviorType}/>
 			</div>
-			<Gnb fnIsGnb={fnIsGnb} isGnb={isGnb} status={status} setStatus={setStatus} fnIsWait={fnIsWait} setBefCalAnswer={setBefCalAnswer}/>
+			<Gnb fnIsGnb={fnIsGnb} isGnb={isGnb} status={status} setStatus={setStatus} fnIsWait={fnIsWait} setBefCalAnswer={setBefCalAnswer} types={types} setTypes={setTypes}/>
 			<Wait isWait={isWait} fnIsWait={fnIsWait} status={status} setStatus={setStatus}/>
 		</div>
 		<div className='pc-right'></div>

@@ -106,7 +106,7 @@ function Test(props) {
                     <div className={styles.how}>
                         <div className={styles.how_inner}>
                             <img src={check} alt='check'/>
-                            <p>선택지 중 본인을 나타내기에 가장 적합하다고 느껴지는 선택지 하나와 그렇지 않은 선택지 하나를 고르십시오.</p>
+                            <p>본인을 가장 잘 나타내는 선택지 하나와 그렇지 않은 선택지 하나를 고르십시오.</p>
                         </div>
                     </div>
                     <div className={styles.how}>

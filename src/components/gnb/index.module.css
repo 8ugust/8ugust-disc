@@ -53,6 +53,11 @@
 
 .gnb_wrap {
     border-bottom: 1px solid #eeeff1;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow: scroll;
+    display: flex;
+    height: 100%;
 }
 
 .gnb_select {
@@ -90,4 +95,14 @@
     text-align: center;
     margin-top: 5px;
     color: #eeeff1;
+}
+
+.gnb_list_type {
+    padding-left: 20px;
+    line-height: 50px;
+    list-style: none;
+    color: #51596a;
+    margin-top: 5px;
+    font-size: 12pt;
+    height: 50px;
 }
