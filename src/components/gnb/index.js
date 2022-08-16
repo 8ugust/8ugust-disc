@@ -48,18 +48,18 @@ function Gnb(props) {
                     <li className={props.status === 4 ? styles.gnb_select : styles.gnb_list} onClick={() => onClickFn(4)}>DISC 란</li>
                     <li className={styles.gnb_list_type}>DISC 유형</li>
                     <div style={{paddingLeft:'20px'}}>
-                        <li className={props.status === 3 && props.types === 'D1' ? styles.gnb_select : styles.gnb_list} onClick={() => onClickTypeFn('D1')}>결과지향자</li>
-                        <li className={props.status === 3 && props.types === 'D2' ? styles.gnb_select : styles.gnb_list} onClick={() => onClickTypeFn('D2')}>성취자</li>
-                        <li className={props.status === 3 && props.types === 'D3' ? styles.gnb_select : styles.gnb_list} onClick={() => onClickTypeFn('D3')}>개척가</li>
-                        <li className={props.status === 3 && props.types === 'I1' ? styles.gnb_select : styles.gnb_list} onClick={() => onClickTypeFn('I1')}>정치가</li>
-                        <li className={props.status === 3 && props.types === 'I2' ? styles.gnb_select : styles.gnb_list} onClick={() => onClickTypeFn('I2')}>헌신자</li>
-                        <li className={props.status === 3 && props.types === 'I3' ? styles.gnb_select : styles.gnb_list} onClick={() => onClickTypeFn('I3')}>협상가</li>
-                        <li className={props.status === 3 && props.types === 'S1' ? styles.gnb_select : styles.gnb_list} onClick={() => onClickTypeFn('S1')}>디자이너</li>
-                        <li className={props.status === 3 && props.types === 'S2' ? styles.gnb_select : styles.gnb_list} onClick={() => onClickTypeFn('S2')}>상담가</li>
-                        <li className={props.status === 3 && props.types === 'S3' ? styles.gnb_select : styles.gnb_list} onClick={() => onClickTypeFn('S3')}>관리자</li>
-                        <li className={props.status === 3 && props.types === 'C1' ? styles.gnb_select : styles.gnb_list} onClick={() => onClickTypeFn('C1')}>설계자</li>
-                        <li className={props.status === 3 && props.types === 'C2' ? styles.gnb_select : styles.gnb_list} onClick={() => onClickTypeFn('C2')}>작가</li>
-                        <li className={props.status === 3 && props.types === 'C3' ? styles.gnb_select : styles.gnb_list} onClick={() => onClickTypeFn('C3')}>원칙주의자</li>
+                        <li className={props.status === 3 && props.types === 'D_결과지향자' ? styles.gnb_select : styles.gnb_list} onClick={() => onClickTypeFn('D_결과지향자')}>결과지향자</li>
+                        <li className={props.status === 3 && props.types === 'D_성취자' ? styles.gnb_select : styles.gnb_list} onClick={() => onClickTypeFn('D_성취자')}>성취자</li>
+                        <li className={props.status === 3 && props.types === 'D_개척가' ? styles.gnb_select : styles.gnb_list} onClick={() => onClickTypeFn('D_개척가')}>개척가</li>
+                        <li className={props.status === 3 && props.types === 'I_정치가' ? styles.gnb_select : styles.gnb_list} onClick={() => onClickTypeFn('I_정치가')}>정치가</li>
+                        <li className={props.status === 3 && props.types === 'I_헌신자' ? styles.gnb_select : styles.gnb_list} onClick={() => onClickTypeFn('I_헌신자')}>헌신자</li>
+                        <li className={props.status === 3 && props.types === 'I_협상가' ? styles.gnb_select : styles.gnb_list} onClick={() => onClickTypeFn('I_협상가')}>협상가</li>
+                        <li className={props.status === 3 && props.types === 'S_디자이너' ? styles.gnb_select : styles.gnb_list} onClick={() => onClickTypeFn('S_디자이너')}>디자이너</li>
+                        <li className={props.status === 3 && props.types === 'S_상담가' ? styles.gnb_select : styles.gnb_list} onClick={() => onClickTypeFn('S_상담가')}>상담가</li>
+                        <li className={props.status === 3 && props.types === 'S_관리자' ? styles.gnb_select : styles.gnb_list} onClick={() => onClickTypeFn('S_관리자')}>관리자</li>
+                        <li className={props.status === 3 && props.types === 'C_설계자' ? styles.gnb_select : styles.gnb_list} onClick={() => onClickTypeFn('C_설계자')}>설계자</li>
+                        <li className={props.status === 3 && props.types === 'C_작가' ? styles.gnb_select : styles.gnb_list} onClick={() => onClickTypeFn('C_작가')}>작가</li>
+                        <li className={props.status === 3 && props.types === 'C_원칙주의자' ? styles.gnb_select : styles.gnb_list} onClick={() => onClickTypeFn('C_원칙주의자')}>원칙주의자</li>
                         <li style={{marginBottom:'50px'}}></li>
                     </div>
                     {test === true ? <li className={styles.gnb_list} onClick={() => tempTest()}>Test</li> : null}

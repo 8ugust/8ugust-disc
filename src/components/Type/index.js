@@ -3,15 +3,21 @@ import styles from './index.module.css';
 
 function Result(props) {
 
+	if (props.status === 3 && props.types !== null) {
+		const [powerful, descType] = props.types.split('_');
+		console.log([powerful, descType]);
+
+	}
+
     return (
         <>
         <div className={props.status === 3 ? styles.result_wrap_show : styles.result_wrap_hide}>
 			<div className={styles.result_type_wrap}>
 				<div className={styles.caption}>당신의 행동 유형은 :</div>
-				<div className={styles.type_nm}>{discTypeNm}</div>
-				<div className={styles.type_cd} style={{color:fnTypeStyles('color')}}>{discTypeCd}</div>
+				<div className={styles.type_nm}>타입명</div>
+				<div className={styles.type_cd}>CODE</div>
 			</div>
-			{Object.keys(result).length === 0 ? null : <div className={styles.result_desc_wrap}>
+			{/* {Object.keys(result).length === 0 ? null : <div className={styles.result_desc_wrap}>
 				<div className={styles.result_desc_inner}>
 					<div className={styles.type_cd} style={{fontSize:'1.4em'}}>행동강점 : {fnTypeStyles('behavior_1')}</div>
 					<div style={{paddingTop:'10px', paddingBottom:'10px'}}>
@@ -25,7 +31,7 @@ function Result(props) {
 					<p style={{margin:0, paddingBottom:'30px'}}>{props.behaviorType[discTypeNm][2]}</p>
 					<p style={{margin:0, paddingBottom:'30px'}}>{props.behaviorType[discTypeNm][3]}</p>
 				</div>
-			</div>}
+			</div>} */}
         </div>
         </>
     );

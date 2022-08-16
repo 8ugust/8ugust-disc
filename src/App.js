@@ -8,6 +8,7 @@ import Definition from './components/definition';
 import Test from './components/test';
 import Result from './components/Result';
 import Wait from './components/Wait';
+import Type from './components/Type';
 
 function App() {
 
@@ -198,6 +199,7 @@ function App() {
 				<Definition status={status} setStatus={setStatus}/>
 				<Test status={status} setStatus={setStatus} setBefCalAnswer={setBefCalAnswer} questions={questions} isGnb={isGnb} fnIsWait={fnIsWait}/>
 				<Result status={status} setStatus={setStatus} befCalAnswer={befCalAnswer} questions={questions} behaviorType={behaviorType}/>
+				<Type status={status} types={types} behaviorType={behaviorType}/>
 			</div>
 			<Gnb fnIsGnb={fnIsGnb} isGnb={isGnb} status={status} setStatus={setStatus} fnIsWait={fnIsWait} setBefCalAnswer={setBefCalAnswer} types={types} setTypes={setTypes}/>
 			<Wait isWait={isWait} fnIsWait={fnIsWait} status={status} setStatus={setStatus}/>
