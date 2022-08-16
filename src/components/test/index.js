@@ -106,13 +106,13 @@ function Test(props) {
                     <div className={styles.how}>
                         <div className={styles.how_inner}>
                             <img src={check} alt='check'/>
-                            <p>각 문항별로 적합에서 선택지 하나, 부적합에서 선택지 하나를 고르십시오.</p>
+                            <p>각 문항의 4가지 단어 중 본인과 가장 가까운 단어를 적합으로, 가장 먼 단어를 부적합으로 고르십시오.</p>
                         </div>
                     </div>
                     <div className={styles.how}>
                         <div className={styles.how_inner}>
                             <img src={brain} alt='brain'/>
-                            <p>본인과 가장 잘 어울리는 단어를 적합으로, 그렇지 않은 단어를 부적합으로 고르시면 됩니다.</p>
+                            <p>선택지에 대한 생각이 적고 판단이 빠를수록 정확도가 상승합니다.</p>
                         </div>
                     </div>
                 </div>

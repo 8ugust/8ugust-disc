@@ -47,7 +47,7 @@ function Questions (props) {
             <div className={(props.answer[props.idx][0][0] !== null && props.answer[props.idx][0][1] !== null) ? styles.quest_inner_done : styles.quest_inner}>
                 <div className={styles.quest_title}>
                     <div className={styles.col_1}>적합</div>
-                    <div className={styles.col_2}></div>
+                    <div className={props.idx === 0 ? styles.col_2_title : styles.col_2}>{props.idx === 0 ? '←적합/부적합 각각 1개 선택→': null}</div>
                     <div className={styles.col_3}>부적합</div>
                 </div>
                 {props.questions.map((item, jdx) => {
