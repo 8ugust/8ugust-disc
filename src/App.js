@@ -184,6 +184,12 @@ function App() {
 
 	// Result Variable
 	const [befCalAnswer, setBefCalAnswer] = React.useState([]);
+
+	// React Hook
+	const element = React.useRef();
+	const moveTop = () => {
+		element.current.scrollIntoView({block:'start'});
+	};
 	
 
 	return (
@@ -195,14 +201,14 @@ function App() {
 				<img src={logo_text} className='logo_text' alt='personality_behaviors'></img>
 				<img src={menu_icon} className='menu_icon' alt='menu_icon' onClick={fnIsGnb} style={{cursor:'pointer'}}></img>
 			</div>
-			<div className='content-body'>
+			<div className='content-body' ref={element}>
 				<Definition status={status} setStatus={setStatus}/>
 				<Test status={status} setStatus={setStatus} setBefCalAnswer={setBefCalAnswer} questions={questions} isGnb={isGnb} fnIsWait={fnIsWait}/>
 				<Result status={status} setStatus={setStatus} befCalAnswer={befCalAnswer} questions={questions} behaviorType={behaviorType}/>
 				<Type status={status} types={types} behaviorType={behaviorType}/>
 			</div>
 			<Gnb fnIsGnb={fnIsGnb} isGnb={isGnb} status={status} setStatus={setStatus} fnIsWait={fnIsWait} setBefCalAnswer={setBefCalAnswer} types={types} setTypes={setTypes}/>
-			<Wait isWait={isWait} fnIsWait={fnIsWait} status={status} setStatus={setStatus}/>
+			<Wait isWait={isWait} fnIsWait={fnIsWait} status={status} setStatus={setStatus} element={element} moveTop={moveTop}/>
 		</div>
 		<div className='pc-right'></div>
 		</>

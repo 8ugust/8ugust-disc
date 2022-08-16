@@ -67,21 +67,6 @@ function Type(props) {
 					<p style={{margin:0, paddingBottom:'30px'}}>{props.types[0] !== null ? props.behaviorType[props.types[2]][3] : null}</p>
 				</div>
 			</div>
-			{/* {Object.keys(result).length === 0 ? null) <div className={styles.result_desc_wrap}>
-				<div className={styles.result_desc_inner}>
-					<div className={styles.type_cd} style={{fontSize:'1.4em'}}>행동강점) {fnTypeStyles('behavior_1')}</div>
-					<div style={{paddingTop:'10px', paddingBottom:'10px'}}>
-						<p style={{borderLeft:'3px solid ' + fnTypeStyles('color'), paddingLeft:'20px'}}>{fnTypeStyles('behavior_2')}</p>
-					</div>
-					<p style={{margin:0, paddingBottom:'30px'}}>{fnTypeStyles('behavior_3_1')}</p>
-					<p style={{margin:0, paddingBottom:'30px'}}>{fnTypeStyles('behavior_3_2')}</p>
-					<div className={styles.type_cd} style={{fontSize:'1.4em', paddingTop:'20px', paddingBottom:'20px'}}>행동패턴) {discTypeNm} ({discTypeCd})</div>
-					<div className={styles.result_desc_middle} style={{backgroundColor:fnTypeStyles('color')}}>{props.behaviorType[discTypeNm][0]}</div>
-					<p style={{margin:0, paddingBottom:'30px'}}>{props.behaviorType[discTypeNm][1]}</p>
-					<p style={{margin:0, paddingBottom:'30px'}}>{props.behaviorType[discTypeNm][2]}</p>
-					<p style={{margin:0, paddingBottom:'30px'}}>{props.behaviorType[discTypeNm][3]}</p>
-				</div>
-			</div>} */}
         </div>
         </>
     );

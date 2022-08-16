@@ -3,6 +3,12 @@ import styles from './index.module.css';
 
 function Gnb(props) {
     const onClickFn = (status) => {
+        if (status === 1) {
+            window.scrollTo(0, 0);
+            window.location.reload();
+            return;
+        }
+
         props.setStatus(status);
         props.fnIsWait();
         props.fnIsGnb();

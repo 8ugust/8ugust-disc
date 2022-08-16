@@ -5,6 +5,7 @@ function Wait (props) {
 
     if (props.isWait === true) {
         window.scrollTo(0, 0);
+        if (props.element.current !== undefined) props.moveTop();
         setTimeout(() => {props.fnIsWait()}, 1000);
     }
 
