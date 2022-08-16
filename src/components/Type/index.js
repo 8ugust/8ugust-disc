@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './index.module.css';
 
-function Result(props) {
+function Type(props) {
 
 	const fnStyles = (param) => {
 		if (props.types[0] === null) return false;
@@ -61,10 +61,10 @@ function Result(props) {
 					<p style={{margin:0, paddingBottom:'30px'}}>{fnStyles('powerful_desc_2')}</p>
 					<p style={{margin:0, paddingBottom:'30px'}}>{fnStyles('powerful_desc_3')}</p>
 					<div className={styles.type_cd} style={{fontSize:'1.4em', paddingTop:'20px', paddingBottom:'20px'}}>행동패턴 : {props.types[2]}</div>
-					<div className={styles.result_desc_middle} style={{backgroundColor:fnStyles('color')}}>{props.behaviorType[props.types[2]][0]}</div>
-					<p style={{margin:0, paddingBottom:'30px'}}>{props.behaviorType[props.types[2]][1]}</p>
-					<p style={{margin:0, paddingBottom:'30px'}}>{props.behaviorType[props.types[2]][2]}</p>
-					<p style={{margin:0, paddingBottom:'30px'}}>{props.behaviorType[props.types[2]][3]}</p>
+					<div className={styles.result_desc_middle} style={{backgroundColor:fnStyles('color')}}>{props.types[0] !== null ? props.behaviorType[props.types[2]][0] : null}</div>
+					<p style={{margin:0, paddingBottom:'30px'}}>{props.types[0] !== null ? props.behaviorType[props.types[2]][1] : null}</p>
+					<p style={{margin:0, paddingBottom:'30px'}}>{props.types[0] !== null ? props.behaviorType[props.types[2]][2] : null}</p>
+					<p style={{margin:0, paddingBottom:'30px'}}>{props.types[0] !== null ? props.behaviorType[props.types[2]][3] : null}</p>
 				</div>
 			</div>
 			{/* {Object.keys(result).length === 0 ? null) <div className={styles.result_desc_wrap}>
@@ -87,4 +87,4 @@ function Result(props) {
     );
 }
 
-export default Result;
+export default Type;
