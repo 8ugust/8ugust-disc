@@ -90,7 +90,6 @@ function Result(props) {
 			[[-27, -23], [-26, -19], [-27, -19], [-26, -21]]	// 1
 		];
 
-		console.log(score);
 		division_2.forEach((item, idx) => {
 			item.forEach((jtem, jdx) => {
 				if (jdx === 0 && (jtem[0] !== null) && (jtem[0] <= score[0][2] && score[0][2] <= jtem[1])) score[0].push(28-idx);	// D
