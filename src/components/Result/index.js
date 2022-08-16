@@ -251,9 +251,6 @@ function Result(props) {
 					<p style={{margin:0, paddingBottom:'30px'}}>{props.behaviorType[discTypeNm][1]}</p>
 					<p style={{margin:0, paddingBottom:'30px'}}>{props.behaviorType[discTypeNm][2]}</p>
 					<p style={{margin:0, paddingBottom:'30px'}}>{props.behaviorType[discTypeNm][3]}</p>
-					<div style={{display:'flex', justifyContent:'center', paddingBottom:'30px'}}>
-						<div className={styles.result_btn}>다시하기</div>
-					</div>
 				</div>
 			</div>}
         </div>
