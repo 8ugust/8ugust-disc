@@ -190,6 +190,11 @@ function App() {
 	const moveTop = () => {
 		element.current.scrollIntoView({block:'start'});
 	};
+
+	// References
+	const official = "https://www.discprofile.com/";
+	const joyrang = "https://joyrang.tistory.com/category/DISC%20%26%20MBTI";
+	const lud = "https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=ibbi5375&logNo=40043462348";
 	
 
 	return (
@@ -207,6 +212,17 @@ function App() {
 				<Result status={status} setStatus={setStatus} befCalAnswer={befCalAnswer} questions={questions} behaviorType={behaviorType}/>
 				<Type status={status} types={types} behaviorType={behaviorType}/>
 			</div>
+			{status !== 1 ? 
+				<div className='footer'>
+					<p className='references'>References</p>
+					<div style={{paddingBottom:"20px"}}>
+						<a className='ref-link' rel='noreferrer' target={'_blank'} href={joyrang}>JOY</a>
+						<a className='ref-link' rel='noreferrer' target={'_blank'} href={official}>Official</a>
+						<a className='ref-link' rel='noreferrer' target={'_blank'} href={lud}>LUD</a>
+					</div>
+					<p className='developed-by'>Developed By - <span style={{color:""}}>@8UGUST</span></p>
+				</div> 
+			: null}
 			<Gnb fnIsGnb={fnIsGnb} isGnb={isGnb} status={status} setStatus={setStatus} fnIsWait={fnIsWait} setBefCalAnswer={setBefCalAnswer} types={types} setTypes={setTypes}/>
 			<Wait isWait={isWait} fnIsWait={fnIsWait} status={status} setStatus={setStatus} element={element} moveTop={moveTop}/>
 		</div>
