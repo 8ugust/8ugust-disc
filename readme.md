@@ -26,9 +26,3 @@
     <li>CSS3</li>
     <li>Draw.io</li>
 </ul>
-
-<style>
-    body {
-        font-size:16px
-    }
-</style>
