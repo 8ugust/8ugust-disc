@@ -1,5 +1,6 @@
 # DISC 행동유형검사 | 12Profiles
-<img src="https://img.shields.io/github/last-commit/seonghan-Min/8ugust-disc/master"><br/>
+<img src="https://img.shields.io/github/last-commit/seonghan-Min/8ugust-disc/master">
+<br />
 <img src="./src/img/readme_img.png">
 <p><b>인간의 행동 패턴에 대한 유형을 진단하는 테스트 <a href="https://15profiles.com">[링크]</a></b></p>
 <p>
