@@ -91,7 +91,7 @@ function Test(props) {
     }
 
     return (
-        <>
+        <div> 
         <div className={props.status === 1 ? styles.test_wrap_show : styles.test_wrap_hide}>
             <div className={styles.discript_wrap}>
                 <h1>DISC 행동유형검사</h1>
@@ -133,7 +133,7 @@ function Test(props) {
                 </div>
             </div>
         </div>
-        </>
+        </div> 
     );
 }
 

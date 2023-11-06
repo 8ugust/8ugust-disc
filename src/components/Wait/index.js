@@ -1,5 +1,6 @@
-import styles from './index.module.css';
 import loading from '../../img/loading.png';
+import styles from './index.module.css';
+import React from 'react';
 
 function Wait (props) {
 
@@ -10,13 +11,13 @@ function Wait (props) {
     }
 
     return (
-        <>
-        <div className={props.isWait ? styles.wait_layer_active : styles.wait_layer_hidden}>
-            <div className={styles.loading}>
-			    <img src={loading} alt='loading'/>
+        <div> 
+            <div className={props.isWait ? styles.wait_layer_active : styles.wait_layer_hidden}>
+                <div className={styles.loading}>
+                    <img src={loading} alt='loading'/>
+                </div>
             </div>
-        </div>
-        </>
+        </div> 
     )
 }
 

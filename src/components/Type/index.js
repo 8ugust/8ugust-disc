@@ -45,7 +45,7 @@ function Type(props) {
 	}
 
     return (
-        <>
+        <div> 
         <div className={props.status === 3 ? styles.result_wrap_show : styles.result_wrap_hide}>
 			<div className={styles.result_type_wrap}>
 				<div className={styles.caption}>행동 유형 :</div>
@@ -68,7 +68,7 @@ function Type(props) {
 				</div>
 			</div>
         </div>
-        </>
+        </div> 
     );
 }
 

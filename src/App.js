@@ -198,36 +198,36 @@ function App() {
 	
 
 	return (
-		<>
-		<div className='pc-left'></div>
-		<div className="App">
-			<div className='navbar'>
-				<img src={logo} className='logo' alt='personality_behaviors'></img>
-				<img src={logo_text} className='logo_text' alt='personality_behaviors'></img>
-				<img src={menu_icon} className='menu_icon' alt='menu_icon' onClick={fnIsGnb} style={{cursor:'pointer'}}></img>
+		<div>
+			<div className='pc-left'></div>
+			<div className="App">
+				<div className='navbar'>
+					<img src={logo} className='logo' alt='personality_behaviors'></img>
+					<img src={logo_text} className='logo_text' alt='personality_behaviors'></img>
+					<img src={menu_icon} className='menu_icon' alt='menu_icon' onClick={fnIsGnb} style={{cursor:'pointer'}}></img>
+				</div>
+				<div className='content-body' ref={element}>
+					<Definition status={status} setStatus={setStatus}/>
+					<Test status={status} setStatus={setStatus} setBefCalAnswer={setBefCalAnswer} questions={questions} isGnb={isGnb} fnIsWait={fnIsWait}/>
+					<Result status={status} setStatus={setStatus} befCalAnswer={befCalAnswer} questions={questions} behaviorType={behaviorType}/>
+					<Type status={status} types={types} behaviorType={behaviorType}/>
+				</div>
+				{status !== 1 ? 
+					<div className='footer'>
+						<p className='references'>References</p>
+						<div style={{paddingBottom:"20px"}}>
+							<a className='ref-link' rel='noreferrer' target={'_blank'} href={joyrang}>JOY</a>
+							<a className='ref-link' rel='noreferrer' target={'_blank'} href={official}>Official</a>
+							<a className='ref-link' rel='noreferrer' target={'_blank'} href={lud}>LUD</a>
+						</div>
+						<p className='developed-by'>Developed By - <span style={{color:""}}>@8UGUST</span></p>
+					</div> 
+				: null}
+				<Gnb fnIsGnb={fnIsGnb} isGnb={isGnb} status={status} setStatus={setStatus} fnIsWait={fnIsWait} setBefCalAnswer={setBefCalAnswer} types={types} setTypes={setTypes}/>
+				<Wait isWait={isWait} fnIsWait={fnIsWait} status={status} setStatus={setStatus} element={element} moveTop={moveTop}/>
 			</div>
-			<div className='content-body' ref={element}>
-				<Definition status={status} setStatus={setStatus}/>
-				<Test status={status} setStatus={setStatus} setBefCalAnswer={setBefCalAnswer} questions={questions} isGnb={isGnb} fnIsWait={fnIsWait}/>
-				<Result status={status} setStatus={setStatus} befCalAnswer={befCalAnswer} questions={questions} behaviorType={behaviorType}/>
-				<Type status={status} types={types} behaviorType={behaviorType}/>
-			</div>
-			{status !== 1 ? 
-				<div className='footer'>
-					<p className='references'>References</p>
-					<div style={{paddingBottom:"20px"}}>
-						<a className='ref-link' rel='noreferrer' target={'_blank'} href={joyrang}>JOY</a>
-						<a className='ref-link' rel='noreferrer' target={'_blank'} href={official}>Official</a>
-						<a className='ref-link' rel='noreferrer' target={'_blank'} href={lud}>LUD</a>
-					</div>
-					<p className='developed-by'>Developed By - <span style={{color:""}}>@8UGUST</span></p>
-				</div> 
-			: null}
-			<Gnb fnIsGnb={fnIsGnb} isGnb={isGnb} status={status} setStatus={setStatus} fnIsWait={fnIsWait} setBefCalAnswer={setBefCalAnswer} types={types} setTypes={setTypes}/>
-			<Wait isWait={isWait} fnIsWait={fnIsWait} status={status} setStatus={setStatus} element={element} moveTop={moveTop}/>
+			<div className='pc-right'></div>
 		</div>
-		<div className='pc-right'></div>
-		</>
 	);
 }
 
