@@ -42,7 +42,7 @@ function Questions (props) {
     }
 
     return (
-        <>
+        <div> 
         <div className={styles.quest_wrap} ref={props.answer[props.idx][2].element}>
             <div className={(props.answer[props.idx][0][0] !== null && props.answer[props.idx][0][1] !== null) ? styles.quest_inner_done : styles.quest_inner}>
                 <div className={styles.quest_title}>
@@ -65,7 +65,7 @@ function Questions (props) {
                 })}
             </div>
         </div>
-        </>
+        </div> 
     );
 }
 

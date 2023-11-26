@@ -192,7 +192,7 @@ function Result(props) {
 	}
 
     return (
-        <>
+        <div> 
         <div className={props.status === 2 ? styles.result_wrap_show : styles.result_wrap_hide}>
 			<div className={styles.result_type_wrap}>
 				<div className={styles.caption}>당신의 행동 유형은 :</div>
@@ -254,7 +254,7 @@ function Result(props) {
 				</div>
 			</div>}
         </div>
-        </>
+        </div> 
     );
 }
 
