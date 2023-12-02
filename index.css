@@ -23,10 +23,11 @@ body {
 .header-wrap {
     box-shadow: 0 4px 4px -4px black;
     border-bottom: 1px solid black;
+    align-items: center;
     position: absolute;
     display: flex;
+    height: 100px;
     width: 100%;
-    height: 10%;
     top: 0;
 }
 
@@ -34,11 +35,17 @@ body {
 
 
 @media (min-width: 1440px) {
+    /* Set Display Width 700px Bigger Than 1440px */
+    /* 1440 x 3088 (Galaxy S22U)        */
+    /* 1290 x 2796 (iPhone 15 Pro Max ) */
+    /* 1179 x 2556 (iPhone 15 )         */
+
     #root {
         width: 700px;
     }
 
     .header-wrap {
         width: 700px;
+        height: 10%;
     }
 }
