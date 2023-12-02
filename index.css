@@ -1,5 +1,8 @@
+/* ==================== ==================== BASE ==================== ==================== */
+
 body {
     justify-content: center;
+    background: #E2E2E2;
     overflow-x: hidden;
     overflow-y: hidden;
     display: flex;
@@ -9,7 +12,7 @@ body {
 }
 
 #root {
-    background: black;
+    background: white;
     width: 100%;
 }
 
@@ -19,3 +22,18 @@ body {
         width: 700px;
     }
 }
+
+/* ==================== ==================== BASE ==================== ==================== */
+
+/* ==================== ==================== HEADER ==================== ==================== */
+
+.header-wrap {
+    box-shadow: 0 4px 4px -4px black;
+    border-bottom: 1px solid black;
+    position: absolute;
+    top: 0;
+    height: 100px;
+    width: 700px;
+}
+
+/* ==================== ==================== HEADER ==================== ==================== */
