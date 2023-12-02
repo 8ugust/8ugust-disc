@@ -14,7 +14,7 @@ body {
 }
 
 
-@media (min-width: 700px) {
+@media (min-width: 1000px) {
     #root {
         width: 700px;
     }
