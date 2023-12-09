@@ -4,7 +4,6 @@ body {
     background: #E2E2E2;
     overflow-x: hidden;
     overflow-y: hidden;
-    display: flex;
     height: 100vh;
     width: 100vw;
     margin: 0;
@@ -12,6 +11,7 @@ body {
 
 #root {
     background: white;
+    height: 100%;
     width: 100%;
 }
 
@@ -20,6 +20,7 @@ body {
 .header-wrap {
     box-shadow: 0 4px 4px -4px black;
     border-bottom: 1px solid black;
+    background-color: white;
     align-items: center;
     position: absolute;
     display: flex;
@@ -86,12 +87,7 @@ body {
     /* 1290 x 2796 (iPhone 15 Pro Max ) */
     /* 1179 x 2556 (iPhone 15 )         */
 
-    #root {
-        width: 700px;
-    }
-
     .header-wrap {
-        width: 700px;
         height: 10%;
     }
 
