@@ -8,14 +8,15 @@
     <title>DISC 행동유형검사 | 12Profiles</title>
   </head>
   <body>
+    <div class="header-wrap">
+        <img src="public/logo.png" style="height: calc(100% - 20px); margin-left: 10px" />
+        <img src="public/logo_text.png" style="height: 90%; margin-top: 15px;" />
+        <img src="public/menu.png" style="height: 100%; margin-left: auto;" />
+    </div>
+
+
+
     <div id="root">
-        <!-- ==================== ==================== HEADER ==================== ==================== -->
-        <div class="header-wrap">
-            <img src="public/logo.png" style="height: calc(100% - 20px); margin-left: 10px" />
-            <img src="public/logo_text.png" style="height: 90%; margin-top: 15px;" />
-            <img src="public/menu.png" style="height: 100%; margin-left: auto;" />
-        </div>
-        <!-- ==================== ==================== HEADER ==================== ==================== -->
         <!-- ==================== ==================== BODY ==================== ==================== -->
         <div class="body-wrap">
           <div class="desc-wrap">
@@ -38,7 +39,23 @@
           </div>
           <img src="public/div_bottom_2.png" style="width: 100%;"/>
         </div>
-        <!-- ==================== ==================== BODY ==================== ==================== -->
+
+
+
+        <!-- ==================== ==================== Content ==================== ==================== -->
+        <div data-include-path="/question/index.html">
+          <div>
+
+          </div>
+
+        </div>
     </div>
   </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      Array.from(document.querySelectorAll('data-include-path')).forEach(href, () => {
+        
+      })
+    })
+  </script>
 </html>
