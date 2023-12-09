@@ -33,7 +33,6 @@ body {
 
 .body-wrap {
     margin-top: 150px;
-    width: 700px;
 }
 
 .desc-wrap {
@@ -87,11 +86,4 @@ body {
     /* 1290 x 2796 (iPhone 15 Pro Max ) */
     /* 1179 x 2556 (iPhone 15 )         */
 
-    .header-wrap {
-        height: 10%;
-    }
-
-    .body-wrap {
-        margin-top: 10%;
-    }
 }
