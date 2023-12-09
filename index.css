@@ -1,7 +1,6 @@
 /* ==================== ==================== BASE ==================== ==================== */
 
 body {
-    justify-content: center;
     background: #E2E2E2;
     overflow-x: hidden;
     overflow-y: hidden;
@@ -33,6 +32,7 @@ body {
 
 .body-wrap {
     margin-top: 150px;
+    width: 700px;
 }
 
 .desc-wrap {
@@ -80,18 +80,18 @@ body {
 
 /* ==================== ==================== Media ==================== ==================== */
 
-@media (min-width: 500px) {
+@media (min-width: 700px) {
     /* Set Display Width 700px Bigger Than 1440px */
     /* 1440 x 3088 (Galaxy S22U)        */
     /* 1290 x 2796 (iPhone 15 Pro Max ) */
     /* 1179 x 2556 (iPhone 15 )         */
 
     #root {
-        width: 500px;
+        width: 700px;
     }
 
     .header-wrap {
-        width: 500px;
+        width: 700px;
         height: 10%;
     }
 
