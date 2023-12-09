@@ -31,9 +31,9 @@ body {
 
 /* ==================== ==================== Body ==================== ==================== */
 
-.body-wrap {
-    margin-top: 150px;
-}
+.body-wrap { margin-top: 150px; }
+
+/* ==================== ==================== Desc ==================== ==================== */
 
 .desc-wrap {
     background-color: #33a474;
@@ -45,6 +45,7 @@ body {
 }
 
 .desc-wrap h1 {
+    font-size: 60px;
     color: white;
     margin: 0;
 } 
@@ -52,6 +53,7 @@ body {
 .desc-wrap > p {
     padding-bottom: 30px;
     padding-top: 10px;
+    font-size: 30px;
     color: white;
     margin: 0;
 }
@@ -66,15 +68,16 @@ body {
     border-radius: 10px;
     margin-bottom: 20px;
     align-items: center;
-    padding: 0 20px;
+    padding: 10px 20px;
     display: flex;
 }
 
 .how img {
     margin-right: 10px;
-    height: 30px;
-    width: 30px;
+    width: 10%;
 }
+
+.how > p { font-size: 25px; }
 
 
 
