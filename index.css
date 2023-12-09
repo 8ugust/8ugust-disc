@@ -16,8 +16,6 @@ body {
     width: 100%;
 }
 
-/* ==================== ==================== BASE ==================== ==================== */
-
 /* ==================== ==================== HEADER ==================== ==================== */
 
 .header-wrap {
@@ -31,8 +29,56 @@ body {
     top: 0;
 }
 
-/* ==================== ==================== HEADER ==================== ==================== */
+/* ==================== ==================== Body ==================== ==================== */
 
+.body-wrap {
+    margin-top: 150px;
+}
+
+.desc-wrap {
+    background-color: #33a474;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+    display: flex;
+    width: 100%;
+}
+
+.desc-wrap h1 {
+    color: white;
+    margin: 0;
+} 
+
+.desc-wrap > p {
+    padding-bottom: 30px;
+    padding-top: 10px;
+    color: white;
+    margin: 0;
+}
+
+.how-wrap {
+    width: 90%;
+}
+
+.how {
+    background-color: hsla(0, 0%, 100%, .8);
+    width: calc(100% - 40px);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    align-items: center;
+    padding: 0 20px;
+    display: flex;
+}
+
+.how img {
+    margin-right: 10px;
+    height: 30px;
+    width: 30px;
+}
+
+
+
+/* ==================== ==================== Media ==================== ==================== */
 
 @media (min-width: 1440px) {
     /* Set Display Width 700px Bigger Than 1440px */
@@ -47,5 +93,9 @@ body {
     .header-wrap {
         width: 700px;
         height: 10%;
+    }
+
+    .body-wrap {
+        margin-top: 10%;
     }
 }
