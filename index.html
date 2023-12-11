@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <link rel="icon" href="public/favicon.ico" />
     <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" type="text/css" href="css/question.css">
     <script type="text/javascript" src="index.js"></script>
     <title>DISC 행동유형검사 | 12Profiles</title>
   </head>
@@ -13,10 +14,13 @@
         <img src="public/logo_text.png" style="height: 90%; margin-top: 15px;" />
         <img src="public/menu.png" style="height: 100%; margin-left: auto;" />
     </div>
-
-
-
     <div id="root">
+
+
+
+
+
+      <div id="test-wrap">
         <!-- ==================== ==================== BODY ==================== ==================== -->
         <div class="body-wrap">
           <div class="desc-wrap">
@@ -39,23 +43,21 @@
           </div>
           <img src="public/div_bottom_2.png" style="width: 100%;"/>
         </div>
-
-
-
+      
+      
         <!-- ==================== ==================== Content ==================== ==================== -->
-        <div data-include-path="/question/index.html">
-          <div>
-
+        <div class="question-wrap">
+          <div class="question">
+            
           </div>
-
         </div>
+      </div>
+
+
+
+
+
+        
     </div>
   </body>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      Array.from(document.querySelectorAll('data-include-path')).forEach(href, () => {
-        
-      })
-    })
-  </script>
 </html>
