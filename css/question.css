@@ -49,13 +49,40 @@
 /* ==================== ==================== Question ==================== ==================== */
 
 .question-wrap {
-	margin: 70px 30px;
+	margin: 30px 30px;
 	display: flex;
-	width: 100%;
+	width: calc(100% - 60px);
 }
 
 .question {
-	background-color: black;
-	height: 100px;
-	width: calc(100% - 60px);
+    background-color: hsla(0, 0%, 100%, .8);
+    border: 1px solid #dddfe2;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 20px;
+    align-items: center;
+    padding: 10px;
+    display: flex;
+	width: 100%;
+}
+
+.q-row {
+    margin: 15px 0;
+    display: flex;
+    width: 100%;
+}
+
+.q-cell {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: 600;
+    font-size: 25px;
+    display: flex;
+    width: 20%;
+}
+
+.q-cell img {
+    height: 80px;
+    width: 80px;
 }
