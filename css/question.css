@@ -49,9 +49,9 @@
 /* ==================== ==================== Question ==================== ==================== */
 
 .question-wrap {
-	margin: 30px 30px;
+	width: calc(100% - 150px);
+	margin-top: 20px;
 	display: flex;
-	width: calc(100% - 60px);
 }
 
 .question {
