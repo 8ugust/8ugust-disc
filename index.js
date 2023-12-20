@@ -18,6 +18,4 @@ const fnSetSvgWidth = () => {
 	// M0 0 L0 60 L350 150 L700 20 L980 100 L980 0
 	const svg_desc = document.getElementById('svg-desc');
 	svg_desc.setAttribute("d", dPath);
-
-	console.log(svg_desc.attributes.d);
 }

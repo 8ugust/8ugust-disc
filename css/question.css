@@ -72,6 +72,10 @@
     width: 100%;
 }
 
+.q-mid {
+    width: 60% !important; 
+}
+
 .q-cell {
     justify-content: center;
     align-items: center;
