@@ -50,8 +50,9 @@
 
 .question-wrap {
 	margin: 30px 30px;
-	display: flex;
 	width: calc(100% - 60px);
+    flex-direction: column;
+	display: flex;
 }
 
 .question {
@@ -60,20 +61,28 @@
     justify-content: center;
     flex-direction: column;
     border-radius: 20px;
+    margin-bottom: 90px;
     align-items: center;
-    padding: 10px;
     display: flex;
 	width: 100%;
 }
 
+.example img {
+    cursor: auto !important;
+}
+
 .q-row {
-    margin: 15px 0;
+    margin: 30px 0;
     display: flex;
     width: 100%;
 }
 
 .q-mid {
     width: 60% !important; 
+}
+
+.opcty {
+    opacity: 0.2;
 }
 
 .q-cell {
@@ -87,6 +96,7 @@
 }
 
 .q-cell img {
+    cursor: pointer;
     height: 80px;
     width: 80px;
 }

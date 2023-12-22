@@ -5,7 +5,9 @@
 		<link rel="icon" href="public/favicon.ico" />
 		<link rel="stylesheet" type="text/css" href="index.css">
 		<link rel="stylesheet" type="text/css" href="css/question.css">
-		<script type="text/javascript" src="index.js"></script>
+		<script type="text/javascript" src="javascript/question.js"></script>
+		<script type="text/javascript" src="javascript/variable.js"></script>
+		<script type="text/javascript" src="javascript/index.js"></script>
 		<title>DISC 행동유형검사 | 12Profiles</title>
 	</head>
 	<body>
@@ -28,29 +30,29 @@
 							<div class="how"><img src="public/brain.png" /><p><b>각 선택지에 대해 짧게 생각하고 빠르게 판단할수록 정확도가 상승합니다.</b></p></div>
 						</div>
 						<div class="question-wrap">
-							<div class="question">
+							<div class="question example">
 								<div class="q-row">
 									<div class="q-cell"><b>적합</b></div>
 									<div class="q-cell" style="width: 60%; color: crimson;"><b>※ 선택방법(예시) ※</b></div>
 									<div class="q-cell"><b>부적합</b></div>
 								</div>
 								<div class="q-row">
-									<div class="q-cell"><img src="public/check_best.png"/></div>
+									<div class="q-cell"><img src="public/check_best.png" /></div>
 									<div class="q-cell q-mid">신중한</div>
-									<div class="q-cell"><img src="public/check.png" style="opacity: 0.2;"/></div>
+									<div class="q-cell opcty"><img src="public/check.png" /></div>
 								</div>
 								<div class="q-row">
-									<div class="q-cell"><img src="public/check.png" style="opacity: 0.2;"/></div>
+									<div class="q-cell opcty"><img src="public/check.png" /></div>
 									<div class="q-cell q-mid">대담한</div>
-									<div class="q-cell"><img src="public/check.png" style="opacity: 0.2;"/></div>
+									<div class="q-cell opcty"><img src="public/check.png" /></div>
 								</div>
 								<div class="q-row">
-									<div class="q-cell"><img src="public/check.png" style="opacity: 0.2;"/></div>
+									<div class="q-cell opcty"><img src="public/check.png" /></div>
 									<div class="q-cell q-mid">치밀한</div>
-									<div class="q-cell"><img src="public/check.png" style="opacity: 0.2;"/></div>
+									<div class="q-cell opcty"><img src="public/check.png" /></div>
 								</div>
 								<div class="q-row">
-									<div class="q-cell"><img src="public/check.png" style="opacity: 0.2;"/></div>
+									<div class="q-cell opcty"><img src="public/check.png" /></div>
 									<div class="q-cell q-mid">따뜻한</div>
 									<div class="q-cell"><img src="public/check_wrst.png"/></div>
 								</div>
@@ -63,16 +65,33 @@
 				</div>
 
 				<!-- ==================== ==================== Content ==================== ==================== -->
-				<div class="question-wrap">
+				<div class="question-wrap" >
 					<div class="question">
-						<div class="q-row">
+						<div class="q-row q-head">
 							<div class="q-cell"><b>적합</b></div>
 							<div class="q-cell q-mid"></div>
 							<div class="q-cell"><b>부적합</b></div>
 						</div>
-						<div class="q-row"></div>
-						<div class="q-row"></div>
-						<div class="q-row"></div>
+						<div class="q-row">
+							<div class="q-cell" data-title="positive" data-value="N"><img src="public/check.png" onclick="fnClickChk(event)"/></div>
+							<div class="q-cell q-mid"></div>
+							<div class="q-cell" data-title="negative" data-value="N"><img src="public/check.png" onclick="fnClickChk(event)"/></div>
+						</div>
+						<div class="q-row">
+							<div class="q-cell" data-title="positive" data-value="N"><img src="public/check.png" onclick="fnClickChk(event)"/></div>
+							<div class="q-cell q-mid"></div>
+							<div class="q-cell" data-title="negative" data-value="N"><img src="public/check.png" onclick="fnClickChk(event)"/></div>
+						</div>
+						<div class="q-row">
+							<div class="q-cell" data-title="positive" data-value="N"><img src="public/check.png" onclick="fnClickChk(event)"/></div>
+							<div class="q-cell q-mid"></div>
+							<div class="q-cell" data-title="negative" data-value="N"><img src="public/check.png" onclick="fnClickChk(event)"/></div>
+						</div>
+						<div class="q-row">
+							<div class="q-cell" data-title="positive" data-value="N"><img src="public/check.png" onclick="fnClickChk(event)"/></div>
+							<div class="q-cell q-mid"></div>
+							<div class="q-cell" data-title="negative" data-value="N"><img src="public/check.png" onclick="fnClickChk(event)"/></div>
+						</div>
 					</div>
 				</div>
 			</div>

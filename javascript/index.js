@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 
 	fnSetSvgWidth();
+	addClass2Question();
 });
 
 
@@ -18,4 +19,10 @@ const fnSetSvgWidth = () => {
 	// M0 0 L0 60 L350 150 L700 20 L980 100 L980 0
 	const svg_desc = document.getElementById('svg-desc');
 	svg_desc.setAttribute("d", dPath);
+}
+
+const addClass2Question = () => {
+	Array.from(document.querySelectorAll('.question:not(.example)')).forEach((question, idx) => {
+		question.classList.add('quest_' + idx);
+	});
 }

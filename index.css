@@ -30,6 +30,7 @@ body {
     position: absolute;
     display: flex;
     height: 150px;
+    z-index: 100;
     width: 100%;
     top: 0;
 }
