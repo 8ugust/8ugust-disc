@@ -24,7 +24,7 @@ const fnClickChk = (e) => {
 		return;
 	}
 
-
+      
 	// Initialize One Side Value N.
 	Array.from(document.querySelectorAll('.' + idx + ' [data-title=' + pttl + ']')).forEach(cell => {
 		cell.children[0].setAttribute('src', img + '.png');
