@@ -11,6 +11,11 @@ const fnClickChk = (e) => {
 	const img = 'public/check';
 
 
+	// Check Validation
+	const opposite = qCell.dataset.title == 'positive' ? 'negative' : 'positive';
+	
+
+
 	// =============== =============== ===============
 	// Initiative Data Value ========= ===============
 	const cName = (qCell.dataset.title == 'positive') ? ' [data-title=positive]' : ' [data-title=negative]';
