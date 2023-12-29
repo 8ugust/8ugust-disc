@@ -37,4 +37,17 @@ const fnClickChk = (e) => {
 	qCell.children[0].setAttribute('src', img + pSrc + '.png');
 	qCell.setAttribute('data-value', 'Y');
 	qCell.classList.remove('opcty');
+
+
+	// Set Background Color & Progress & Percentage Value
+	if (document.querySelectorAll('.' + idx + ' [data-value=Y]').length == 2) {
+		const percnt = document.getElementById('percentage');
+		const filler = document.getElementById('filler');
+		this.global.qDone++
+
+		const pValue = Math.round( this.global.qDone / 28 * 100);
+		qMain.style.backgroundColor = 'hsla(127, 86%, 72%, .2)';
+		filler.style.width = pValue + '%';
+		percnt.innerHTML = pValue + '%';
+	}
 }
