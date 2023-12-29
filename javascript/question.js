@@ -49,5 +49,39 @@ const fnClickChk = (e) => {
 		qMain.style.backgroundColor = 'hsla(127, 86%, 72%, .2)';
 		filler.style.width = pValue + '%';
 		percnt.innerHTML = pValue + '%';
+		qMain.classList.add('done');
 	}
+}
+
+
+
+
+const fnQuestEnd = () => {
+	// Find No Answer Question
+	if (this.global.qDone != 28) {
+		const qList = document.querySelectorAll('.question:not(.done, .example)');
+		qList.forEach(q => q.style.backgroundColor = 'hsla(0, 100%, 70%, .2)');
+
+		qList[0].scrollIntoView({
+			behavior: 'smooth',
+			block: 'center'
+		});
+
+		return false;
+	}
+
+	// Calculate DISC Grade
+	Array.from(document.querySelectorAll('.done')).forEach((quest, idx) => {
+		const query = '.' + quest.classList[1] + ' .q-cell:not(.q-head, .q-mid)';
+		Array.from(document.querySelectorAll(query)).forEach( (cell, jdx) => {
+			if (cell.dataset.value == 'Y') {
+				const kdx = Math.floor(jdx / 2);
+				const title = cell.dataset.title;
+				if (title == 'positive') { this.global.answer[this.global.questions[idx][kdx][1]]++ }
+				if (title == 'negative') { this.global.answer[this.global.questions[idx][kdx][2]]++ }
+			}
+		})
+	});
+
+	console.log(this.global.answer);
 }

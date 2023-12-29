@@ -108,13 +108,43 @@
     width: 80px;
 }
 
+/* ==================== ==================== Answer ==================== ==================== */
+
+.answer-wrap {
+    margin: -100px 100px 150px 100px;
+    width: calc(100% - 200px);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 100px;
+}
+
+.answer {
+    -webkit-tap-highlight-color: transparent !important;
+    background-color: #33a474;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 30px;
+    color: white;
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.answer:active {
+    background-color: #1c6949;
+}
+
+
 /* ==================== ==================== Bottom ==================== ==================== */
 
 .bottom-wrap {
     background-color: #576071;
     justify-content: center;
     align-items: center;
-    position: fixed;
+    position: absolute;
     display: flex;
     height: 100px;
     z-index: 10;
@@ -123,10 +153,11 @@
 }
 
 #percentage {
-    position: fixed;
+    position: absolute;
     font-weight: bold;
     font-size: 30px;
     color: white;
+    display: flex;
     z-index: 20;
 }
 
