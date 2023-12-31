@@ -5,17 +5,19 @@
 		<meta name="viewport" content="user-scalable=no">
 		<link rel="icon" href="public/favicon.ico" />
 		<link rel="stylesheet" type="text/css" href="index.css">
+		<link rel="stylesheet" type="text/css" href="css/menu.css">
 		<link rel="stylesheet" type="text/css" href="css/question.css">
 		<script type="text/javascript" src="javascript/question.js"></script>
 		<script type="text/javascript" src="javascript/global.js"></script>
 		<script type="text/javascript" src="javascript/index.js"></script>
+		<script type="text/javascript" src="javascript/menu.js"></script>
 		<title>DISC 행동유형검사 | 12Profiles</title>
 	</head>
 	<body>
 		<div class="header-wrap">
 			<img src="public/logo.png" style="height: calc(100% - 20px); margin-left: 10px" />
 			<img src="public/logo_text.png" style="height: 90%; margin-top: 15px;" />
-			<img src="public/menu.png" style="height: 100%; margin-left: auto;" />
+			<img src="public/menu.png" style="height: 100%; margin-left: auto;" onclick="fnMenuClick()"/>
 		</div>
 		<div id="root">
 
@@ -84,7 +86,9 @@
 
 
 			<!-- ==================== ==================== Menu ==================== ==================== -->
+			<div id="menu-wrap" style="display: none;">
 
+			</div>
 
 
 
