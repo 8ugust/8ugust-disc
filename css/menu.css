@@ -1,3 +1,5 @@
+/* ==================== ==================== menu ==================== ==================== */
+
 #menu-wrap {
 	background-color: rgba(0, 0, 0, .3);
 	position: fixed;
@@ -16,3 +18,35 @@
 	0% { height: 100%; }
 	100% { height: 0px; }
 }
+
+/* ==================== ==================== wrap ==================== ==================== */
+
+.menu-wrap {
+	border-bottom-left-radius: 50px;
+	height: calc( 100% - 150px );
+	background-color: white;
+	margin-top: 150px;
+	margin-left: auto;
+	overflow: scroll;
+	width: 80%;
+}
+
+.menu-wrap::-webkit-scrollbar {
+    display: none;
+}
+
+/* ==================== ==================== list ==================== ==================== */
+
+.list {
+	width: calc( 100% - 60px );
+	margin: 20px 0 20px 20px;
+	padding: 30px 20px;
+	font-size: 40px;
+	color: gray;
+}
+
+.now {
+	background-color: rgba(128, 128, 128, 0.3);
+	color: #459c77;
+}
+
