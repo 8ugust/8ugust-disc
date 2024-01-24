@@ -40,7 +40,7 @@ const fnClickChk = (e) => {
 
 
 	// Set Background Color & Progress & Percentage Value
-	if (document.querySelectorAll('.' + idx + ' [data-value=Y]').length == 2) {
+	if (document.querySelectorAll('.' + idx + ' [data-value=Y]').length == 2 && Array.from(qMain.classList).indexOf('done') == -1) {
 		const percnt = document.getElementById('percentage');
 		const filler = document.getElementById('filler');
 		this.global.qDone++
@@ -56,9 +56,9 @@ const fnClickChk = (e) => {
 
 
 
-const fnQuestEnd = () => {
+const fnQuestEnd = (test) => {
 	// Find No Answer Question
-	if (this.global.qDone != 28) {
+	if (this.global.qDone != 28 && test == undefined) {
 		const qList = document.querySelectorAll('.question:not(.done, .example)');
 		qList.forEach(q => q.style.backgroundColor = 'hsla(0, 100%, 70%, .2)');
 
@@ -70,6 +70,12 @@ const fnQuestEnd = () => {
 		return false;
 	}
 
+
+	// Define Answer Value
+	const answer = { 'D': 0, 'I': 0, 'S': 0, 'C': 0, 'N': 0 };
+	const score  = { 'D': 0, 'I': 0, 'S': 0, 'C': 0 };
+
+
 	// Calculate DISC Grade
 	Array.from(document.querySelectorAll('.done')).forEach((quest, idx) => {
 		const query = '.' + quest.classList[1] + ' .q-cell:not(.q-head, .q-mid)';
@@ -77,11 +83,40 @@ const fnQuestEnd = () => {
 			if (cell.dataset.value == 'Y') {
 				const kdx = Math.floor(jdx / 2);
 				const title = cell.dataset.title;
-				if (title == 'positive') { this.global.answer[this.global.questions[idx][kdx][1]]++ }
-				if (title == 'negative') { this.global.answer[this.global.questions[idx][kdx][2]]++ }
+				if (title == 'positive') { answer[this.global.questions[idx][kdx][1]]++ }
+				if (title == 'negative') { answer[this.global.questions[idx][kdx][2]]-- }
 			}
 		})
 	});
 
-	console.log(this.global.answer);
+	
+	// Randomize Answer Value When Testing.
+	if (test != undefined) {
+		this.global.questions.forEach(quest => {
+			const indexArr = [0, 1, 2, 3];
+			answer[quest[indexArr.splice(Math.floor(Math.random() * 4), 1)][1]]++;
+			answer[quest[indexArr.splice(Math.floor(Math.random() * 3), 1)][2]]--;
+		});
+	}
+	
+
+	// Set DISC Grade
+	this.global.grades.forEach((grade, i) => {
+		const type = ['D', 'I', 'S', 'C'];
+		grade.forEach((range, j) => {
+			if (range != null && (range[0] <= answer[type[j]] && answer[type[j]] <= range[1]) ) {
+				score[type[j]] = (i+1);
+			}
+		}) 
+	});
+
+
+	// Sort Grade
+	const scArr = []; Object.keys(score).forEach(key => { scArr.push([key, score[key]]) }); 
+	const result = scArr.sort((a, b) => b[1] - a[1]).splice(0, 2);
+	this.global.result = (result[0][1]/28 < 0.9) 
+		? result[0][0] + result[1][0]
+		: result[0][0] ;
+
+	console.log(this.global.result);
 }
