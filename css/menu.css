@@ -22,13 +22,12 @@
 /* ==================== ==================== wrap ==================== ==================== */
 
 .menu-wrap {
-	border-bottom-left-radius: 50px;
 	height: calc( 100% - 150px );
 	background-color: white;
 	margin-top: 150px;
 	margin-left: auto;
 	overflow: scroll;
-	width: 80%;
+	width: 75%;
 }
 
 .menu-wrap::-webkit-scrollbar {
