@@ -2,6 +2,7 @@
 // ==================== ==================== ==================== ==================== ==================== ====================
 document.addEventListener("DOMContentLoaded", () => {
 
+	fixAdStyle();
 	fnSetQuest();
 	fnSetSvgWidth();
 	addClass2Question();
@@ -76,5 +77,29 @@ const fnSetQuest = () => {
 
 		html = new DOMParser().parseFromString(html, 'text/html');
 		wrap.appendChild(html.body.childNodes[0]);
+	})
+}
+
+
+
+// ==================== ==================== ==================== ==================== ====================
+// ==================== ==================== ==================== ==================== ====================
+const fixAdStyle = () => {
+	const adWrap = document.getElementById('ad-wrap');
+	const adClassWrap = document.getElementsByClassName('ad-wrap')[0];
+	const adClassBody = document.getElementsByClassName('ad-body')[0];
+	const adClassMain = document.getElementsByClassName('ad-main')[0];
+	const observer = new MutationObserver((mutations, observer) => {
+		adWrap.style.height = '';
+		adClassBody.style.height = '';
+		adClassWrap.style.height = '';
+		adClassMain.style.height = '';
+	})
+
+	Array.from([adWrap, adClassWrap, adClassBody, adClassMain]).forEach(element => {
+		observer.observe(element, {
+			attributes: true,
+			attributeFilter: ['style']
+		});
 	})
 }
