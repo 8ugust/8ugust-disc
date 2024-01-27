@@ -118,5 +118,6 @@ const fnQuestEnd = (test) => {
 		? result[0][0] + result[1][0]
 		: result[0][0] ;
 
-	console.log(this.global.result);
+
+	fnShowAd();
 }
