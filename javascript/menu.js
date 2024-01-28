@@ -20,7 +20,13 @@ const fnMenuClick = () => {
 const fnListClick = (e) => {
 	const mIdx = e.target.dataset.index;
 	if (mIdx == "A0") window.location.reload();
+	if (mIdx == "A1") {
+		document.getElementById('test-wrap').style.display = 'none';
+		document.getElementById('explain-wrap').style.display = 'flex';
+	}
 	
 	document.querySelector('#menu-wrap .now').classList.remove('now');
 	e.target.classList.add('now');
+
+	fnMenuClick();
 }

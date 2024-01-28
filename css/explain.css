@@ -1,0 +1,43 @@
+#explain-wrap {
+    flex-direction: column;
+    margin-top: 150px;
+    display: flex;
+    width: 100%;
+}
+
+.explain-wrap {
+    background: rgb(89, 150, 177);
+    width: 100%;
+}
+
+.explain-inner {
+    width: calc(100% - 60px);
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    margin: 100px 30px;
+}
+
+.explain-inner h1 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 35px;
+    color: white;
+    margin: 10px;
+    width: 100%;
+}
+
+.explain-inner p {
+    text-align: center;
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 70px;
+}
+
+#explain-wrap img {
+    
+}

@@ -6,6 +6,11 @@ document.addEventListener("DOMContentLoaded", () => {
 	fnSetQuest();
 	fnSetSvgWidth();
 	addClass2Question();
+
+
+	// Test
+	document.getElementById('test-wrap').style.display = 'none';
+	document.getElementById('explain-wrap').style.display = 'flex';
 });
 
 
@@ -25,7 +30,9 @@ const fnSetSvgWidth = () => {
 
 	// M0 0 L0 60 L350 150 L700 20 L980 100 L980 0
 	const svg_desc = document.getElementById('svg-desc');
+	const exp_desc = document.getElementById('exp-desc');
 	svg_desc.setAttribute("d", dPath);
+	exp_desc.setAttribute("d", dPath);
 }
 
 
