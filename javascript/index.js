@@ -9,8 +9,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 	// Test
-	document.getElementById('test-wrap').style.display = 'none';
-	document.getElementById('explain-wrap').style.display = 'flex';
+	// document.getElementById('test-wrap').style.display = 'none';
+	// document.getElementById('explain-wrap').style.display = 'flex';
 });
 
 
