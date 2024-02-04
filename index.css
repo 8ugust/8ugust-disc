@@ -7,12 +7,14 @@ body {
     height: 100vh;
     width: 100vw;
     margin: 0;
+    display: flex;
+    justify-content: center;
 }
 
 #root {
     background: white;
-    overflow: scroll;
     position: relative;
+    overflow: scroll;
     display: flex;
     height: 100%;
     width: 100%;
@@ -48,5 +50,19 @@ body {
     /* 1440 x 3088 (Galaxy S22U)        */
     /* 1290 x 2796 (iPhone 15 Pro Max ) */
     /* 1179 x 2556 (iPhone 15 )         */
+
+    #root {
+        width: 700px;
+    }
+
+    .header-wrap {
+        box-shadow: 0 4px 4px -4px black;
+        width: 700px;
+        height: 70px;
+    }
+
+    .body-wrap {
+        margin-top: 70px;
+    }
 
 }

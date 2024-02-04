@@ -41,6 +41,7 @@
 	margin: 20px 0 20px 20px;
 	padding: 30px 20px;
 	font-size: 40px;
+	font-weight: bold;
 	color: gray;
 }
 
@@ -49,3 +50,26 @@
 	color: #459c77;
 }
 
+
+
+@media (min-width: 1000px) {
+    /* Set Display Width 700px Bigger Than 1440px */
+    /* 1440 x 3088 (Galaxy S22U)        */
+    /* 1290 x 2796 (iPhone 15 Pro Max ) */
+    /* 1179 x 2556 (iPhone 15 )         */
+
+	#menu-wrap {
+		width: 700px;
+	}
+
+	.menu-wrap {
+		height: calc(100% - 70px);
+		margin-top: 70px;
+		width: 60%;
+	}
+
+	.list {
+		font-size: 20px;
+		cursor: pointer;
+	}
+}

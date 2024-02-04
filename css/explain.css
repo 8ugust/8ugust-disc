@@ -37,3 +37,24 @@
     margin-top: 0;
     margin-bottom: 70px;
 }
+
+
+
+@media (min-width: 1000px) {
+    /* Set Display Width 700px Bigger Than 1440px */
+    /* 1440 x 3088 (Galaxy S22U)        */
+    /* 1290 x 2796 (iPhone 15 Pro Max ) */
+    /* 1179 x 2556 (iPhone 15 )         */
+
+    #explain-wrap {
+        margin-top: 70px;
+    }
+
+    .explain-inner {
+        margin: 50px 30px;
+    }
+
+    .explain-inner p {
+        font-size: 20px;
+    }
+}

@@ -58,3 +58,17 @@
 .wait {
 	opacity: 40%;
 }
+
+
+
+@media (min-width: 1000px) {
+    /* Set Display Width 700px Bigger Than 1440px */
+    /* 1440 x 3088 (Galaxy S22U)        */
+    /* 1290 x 2796 (iPhone 15 Pro Max ) */
+    /* 1179 x 2556 (iPhone 15 )         */
+
+	#ad-wrap {
+		width: 700px;
+	}
+
+}
