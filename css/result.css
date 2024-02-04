@@ -1,0 +1,41 @@
+/* ==================== ==================== Result ==================== ==================== */
+#result-wrap {
+    flex-direction: column;
+    margin-top: 150px;
+    display: flex;
+    width: 100%;
+}
+
+
+.result-head {
+    width: calc(100% - 40px);
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    margin: 20px;
+}
+
+.result-head p {
+    color: red;
+}
+
+
+
+
+
+
+/* ==================== ==================== Media ==================== ==================== */
+
+@media (min-width: 1000px) {
+    /* Set Display Width 700px Bigger Than 1440px */
+    /* 1440 x 3088 (Galaxy S22U)        */
+    /* 1290 x 2796 (iPhone 15 Pro Max ) */
+    /* 1179 x 2556 (iPhone 15 )         */
+
+    #result-wrap {
+        margin-top: 70px;
+        width: 700px;
+    }
+
+}
