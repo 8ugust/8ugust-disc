@@ -4,11 +4,19 @@ body {
     background: #E2E2E2;
     overflow-x: hidden;
     overflow-y: hidden;
+    display: flex;
     height: 100vh;
     width: 100vw;
     margin: 0;
-    display: flex;
-    justify-content: center;
+}
+
+.main-wrap {
+    width: 1000px;
+}
+
+.main-side {
+    width: calc((100% - 1000px)/2);
+    display: none;
 }
 
 #root {
@@ -52,17 +60,21 @@ body {
     /* 1179 x 2556 (iPhone 15 )         */
 
     #root {
-        width: 700px;
+        width: 1000px;
     }
 
     .header-wrap {
         box-shadow: 0 4px 4px -4px black;
-        width: 700px;
+        width: 1000px;
         height: 70px;
     }
 
     .body-wrap {
         margin-top: 70px;
+    }
+
+    .main-side {
+        display: block;
     }
 
 }
