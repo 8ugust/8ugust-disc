@@ -11,11 +11,11 @@ body {
 }
 
 .main-wrap {
-    width: 1000px;
+    width: 700px;
 }
 
 .main-side {
-    width: calc((100% - 1000px)/2);
+    width: calc((100% - 700px)/2);
     display: none;
 }
 
@@ -53,19 +53,19 @@ body {
 
 /* ==================== ==================== Media ==================== ==================== */
 
-@media (min-width: 1000px) {
+@media (min-width: 700px) {
     /* Set Display Width 700px Bigger Than 1440px */
     /* 1440 x 3088 (Galaxy S22U)        */
     /* 1290 x 2796 (iPhone 15 Pro Max ) */
     /* 1179 x 2556 (iPhone 15 )         */
 
     #root {
-        width: 1000px;
+        width: 700px;
     }
 
     .header-wrap {
         box-shadow: 0 4px 4px -4px black;
-        width: 1000px;
+        width: 700px;
         height: 70px;
     }
 
