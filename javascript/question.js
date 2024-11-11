@@ -2,11 +2,10 @@
 // Check Btn Click Event =================== ==================== ====================
 // ==================== ==================== ==================== ====================
 const fnClickChk = (e) => {
-	// Define Essential Parent Tag.
-	const qCell = e.target.parentElement;
-	const qRow	= qCell.parentElement;
-	const qMain = qRow.parentElement;
-	const idx = qMain.classList[1];
+	const qCell = e.target.parentElement;	/* 클릭한 버튼 */
+	const qRow	= qCell.parentElement;		/* 버튼이 위치하는 Row */
+	const qMain = qRow.parentElement;		/* Row가 위치하는 질문 */
+	const idx = qMain.classList[1];			/* 해당 질문의 순번 */
 	const img = 'public/check';
 
 
@@ -63,8 +62,8 @@ const fnQuestEnd = (test) => {
 		qList.forEach(q => q.style.backgroundColor = 'hsla(0, 100%, 70%, .2)');
 
 		qList[0].scrollIntoView({
-			behavior: 'smooth',
-			block: 'center'
+			behavior: "smooth",
+			block: "center"
 		});
 
 		return false;
@@ -119,5 +118,5 @@ const fnQuestEnd = (test) => {
 		: result[0][0] ;
 
 
-	fnShowAd();
+	// fnShowAd();
 }
