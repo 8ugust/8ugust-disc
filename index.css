@@ -1,5 +1,9 @@
 /* ==================== ==================== BASE ==================== ==================== */
 
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
 body {
     background: #E2E2E2;
     overflow-x: hidden;
