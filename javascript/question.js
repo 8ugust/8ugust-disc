@@ -140,7 +140,6 @@ const fnQuestEnd = (test) => {
 	} else this.global.result = result[0][0] + result[1][0];
 
 
-	// 결과 창 띄우기
-	document.getElementById('test-wrap').style.display = 'none';
-	document.getElementById('result-wrap').style.display = 'flex';
+	// 결과 설정
+	fnSetResult();
 }

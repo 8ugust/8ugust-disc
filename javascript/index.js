@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	// fixAdStyle();
 
 	// Test
-	// fnQuestEnd('T');
+	fnQuestEnd('T');
 });
 
 
@@ -38,6 +38,18 @@ const fnSetSvgWidth = () => {
 	const exp_desc = document.getElementById('exp-desc');
 	svg_desc.setAttribute("d", dPath);
 	exp_desc.setAttribute("d", dPath);
+
+
+	// 결과 페이지 SVG 랜더링
+	let rPath = "";
+	rPath += "M0 0 L0 60 ";
+	rPath += "L" + per_30 + " 100 ";
+	rPath += "L" + per_60 + " 10 ";
+	rPath += "L" + rWidth + " 50 ";
+	rPath += "L" + rWidth + " 0 ";
+
+	document.getElementById('svg-ratio-top').setAttribute("d", rPath);
+	document.getElementById('svg-ratio-bot').setAttribute("d", rPath);
 }
 
 
