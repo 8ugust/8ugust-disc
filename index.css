@@ -1,7 +1,20 @@
 /* ==================== ==================== BASE ==================== ==================== */
 
+/* noto-sans-kr-regular - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../css/noto-sans-kr-v36-latin-regular.woff2') format('woff2');
+  }
+
+
+
+
 * {
     -webkit-tap-highlight-color: rgba(0,0,0,0);
+    font-family: 'Noto Sans KR', sans-serif;
 }
 
 body {
