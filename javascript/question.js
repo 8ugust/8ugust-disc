@@ -75,6 +75,23 @@ const fnQuestEnd = (test) => {
 	const score  = { 'D': 0, 'I': 0, 'S': 0, 'C': 0 };
 
 
+	// 테스트 할 때 랜덤으로 값을 지정.
+	if (test != undefined) {
+		Array.from(document.querySelectorAll('.question:not(.done, .example)')).forEach((quest, idx) => {
+			const best = [0, 2, 4, 6];
+			const idx1 = Math.floor(Math.random() * best.length);
+			
+			const wrst = [1, 3, 5, 7].filter((_, idx) => idx !== idx1);
+			const idx2 = Math.floor(Math.random() * wrst.length);
+
+			quest.querySelectorAll('img')[best[idx1]].click();
+			quest.querySelectorAll('img')[wrst[idx2]].click();
+	
+		});
+	}
+	
+
+
 	// Calculate DISC Grade
 	Array.from(document.querySelectorAll('.done')).forEach((quest, idx) => {
 		const query = '.' + quest.classList[1] + ' .q-cell:not(.q-head, .q-mid)';
@@ -118,11 +135,8 @@ const fnQuestEnd = (test) => {
 	// 결과가 DIS | DIC | SIC | DSC 중에 하나일 경우 분기.
 	// 마지막 세 번째 글자가 20% 이상일 경우 세 글자 유형으로 처리.
 	const tRes = result[0][0] + result[1][0] + result[2][0];
-	if (['DIS', 'DIC', 'SIC' , 'DSC'].indexOf(tRes) != -1) {
-		if (result[2][1] / (result[0][1] + result[1][1] + result[2][1]) >= 0.2) {
-			this.global.result = tRes;
-		}
-	
+	if (['DIS', 'DIC', 'SIC' , 'DSC'].indexOf(tRes) != -1 && (result[2][1] / (result[0][1] + result[1][1] + result[2][1]) >= 0.2)) {
+		this.global.result = tRes;
 	} else this.global.result = result[0][0] + result[1][0];
 
 

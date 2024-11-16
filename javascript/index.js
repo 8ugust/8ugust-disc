@@ -10,8 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	// fixAdStyle();
 
 	// Test
-	// document.getElementById('test-wrap').style.display = 'none';
-	// document.getElementById('result-wrap').style.display = 'flex';
+	fnQuestEnd('T');
 });
 
 
