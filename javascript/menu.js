@@ -22,6 +22,7 @@ const fnListClick = (e) => {
 	if (mIdx == "A0") window.location.reload();
 	if (mIdx == "A1") {
 		document.getElementById('test-wrap').style.display = 'none';
+		document.getElementById('result-wrap').style.display = 'none';
 		document.getElementById('explain-wrap').style.display = 'flex';
 	}
 	

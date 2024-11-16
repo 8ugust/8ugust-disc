@@ -1,4 +1,4 @@
-/* ==================== ==================== Result ==================== ==================== */
+/* ==================== ==================== Wrap ==================== ==================== */
 #result-wrap {
     flex-direction: column;
     margin-top: 150px;
@@ -7,38 +7,44 @@
 }
 
 
+
+/* ==================== ==================== Head ==================== ==================== */
 .result-head {
     width: calc(100% - 40px);
     justify-content: center;
     flex-direction: column;
     align-items: center;
     display: flex;
-    margin: 20px;
+    margin: 20px 20px 40px 20px;
 }
 
 .result-head p {
     font-weight: lighter;
-    font-size: 20px;
-    margin: 20px 0;
+    font-size: 30px;
+    margin: 20px 0 10px 0;
 }
 
 .result-head h1 {
+    font-size: 70px;
+    font-weight: bold;
     margin: 0;
 }
 
 
 
-
-
+/* ==================== ==================== Main ==================== ==================== */
 #type-ratio-main {
     justify-content: center;
     align-items: center;
-    margin-top: -4px;
+    margin-top: -6px;
     display: flex;
-    height: 500px;
+    height: 800px;
     width: 100%;
 }
 
+
+
+/* ==================== ==================== Body ==================== ==================== */
 .type-ratio-body {
     border-radius: 20px;
     border: 1px solid #E2E2E2;
@@ -52,31 +58,52 @@
     margin-top: 0;
 }
 
+
+
+/* ==================== ==================== Content ==================== ==================== */
 .type-ratio {
-    justify-content: space-between;
     height: calc((100% - 6px)/4);
+    justify-content: center;
+    flex-direction: column;
     align-items: center;
     display: flex;
     width: 100%;
 }
 
-.type-ratio .char {
-    justify-content: center;
-    font-weight: bold;
-    display: flex;
+.type-ratio p { 
+    font-weight: bold; 
+    font-size: 30px; 
+    margin: 10px; 
 }
 
+.ratio {
+    justify-content: space-between;
+    height: calc(100% - 50px);
+    align-items: center;
+    display: flex;
+    width: 100%;
+}
 
+.ratio span {
+    justify-content: center;
+    text-align: center;
+    font-weight: bold;
+    margin-top: -10px;
+    font-size: 30px;
+    display: flex;
+    width: 10%;
+}
 
-
+.ratio :nth-child(1) { font-size: 50px; width: 7%;}
+.ratio :nth-child(3) { justify-content: left;}
 
 .ratio-bar {
     border: 1px solid #E2E2E2;
-    border-radius: 20px;
+    width: calc(83% - 20px);
+    border-radius: 50px;
     overflow: hidden;
-    /* margin: 0 10px; */
-    height: 30px;
-    width: 100%;
+    margin: 0 10px;
+    height: 50%;
 }
 
 .filler {
