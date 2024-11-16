@@ -71,14 +71,14 @@
 }
 
 .type-ratio p { 
+    margin: 10px 0 0 0; 
     font-weight: bold; 
-    font-size: 30px; 
-    margin: 10px; 
+    font-size: 35px; 
 }
 
 .ratio {
     justify-content: space-between;
-    height: calc(100% - 50px);
+    height: calc(100% - 70px);
     align-items: center;
     display: flex;
     width: 100%;
@@ -94,11 +94,11 @@
     width: 10%;
 }
 
-.ratio :nth-child(1) { font-size: 50px; width: 7%;}
-.ratio :nth-child(3) { justify-content: left;}
+.ratio span:nth-child(1) { font-size: 50px; width: 7%;}
+.ratio span:nth-child(3) { justify-content: left;}
 
 .ratio-bar {
-    border: 1px solid #E2E2E2;
+    border: 2px solid #E2E2E2;
     width: calc(83% - 20px);
     border-radius: 50px;
     overflow: hidden;
@@ -108,7 +108,7 @@
 
 .filler {
     height: 100%;
-    width: 30%;
+    width: 0%;
 }
 
 

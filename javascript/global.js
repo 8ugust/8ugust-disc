@@ -1,6 +1,6 @@
 this.global = {};
 this.global.qDone = 0;
-this.global.result = '';
+this.global.result = [null, null];
 
 this.global.questions = [
 	[['열정적인', 'I', 'I'], ['대담한', 'D', 'D'], ['치밀한', 'C', 'C'], ['만족해하는', 'S', 'S']],

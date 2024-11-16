@@ -21,18 +21,35 @@ const fnShowAd = () => {
 
 
 const fnSetResult = () => {
-	const color = this.global.category[this.global.result][1];
+	const result = this.global.result[1];
+	const color = this.global.category[result][1];
 
 
-	// 결과 헤더 설정
-	document.getElementById('type').innerHTML = this.global.category[this.global.result][0];
-	document.getElementById('disc').innerHTML = this.global.result;
+	// 헤더에 결과값 설정
+	document.getElementById('type').innerHTML = this.global.category[result][0];
 	document.getElementById('disc').style.color = color;
+	document.getElementById('disc').innerHTML = result;
 
-	// 결과 비율 설정
+	// 결과 분류 유형(D/I/S/C)에 따른 SVG 색상 설정
 	document.getElementById('type-ratio-main').style.background = color;
 	document.getElementById('svg-ratio-top').setAttribute('fill', color);
 	document.getElementById('svg-ratio-bot').setAttribute('fill', color);
+
+	// 각 유형 별 점수를 그래프로 환산하여 출력.
+	const scores = { D: 27, I: 28, S: 26, C: 24 };
+	this.global.result[0].forEach(([key, val]) => {
+		const percent = Math.floor(val/scores[key]*100);
+		document.getElementById('fill_' + key).style.width = percent + '%';
+		document.getElementById('num_' + key).innerHTML = percent + '%';
+	});
+
+
+
+
+
+
+
+
 
 
 	// 결과 화면 오픈
