@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	// fixAdStyle();
 
 	// Test
-	// fnQuestEnd('T');
+	fnQuestEnd('T');
 });
 
 

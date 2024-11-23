@@ -22,18 +22,22 @@ const fnShowAd = () => {
 
 const fnSetResult = () => {
 	const result = this.global.result[1];
-	const color = this.global.category[result][1];
+	const type = this.global.category[result][1];
+	const strength = this.global.type[type][1];
+	const color = this.global.type[type][0];
 
 
 	// 헤더에 결과값 설정
 	document.getElementById('type').innerHTML = this.global.category[result][0];
+	document.getElementById('strength').innerHTML = strength;
 	document.getElementById('disc').style.color = color;
 	document.getElementById('disc').innerHTML = result;
 
 	// 결과 분류 유형(D/I/S/C)에 따른 SVG 색상 설정
-	document.getElementById('type-ratio-main').style.background = color;
 	document.getElementById('svg-ratio-top').setAttribute('fill', color);
 	document.getElementById('svg-ratio-bot').setAttribute('fill', color);
+	document.getElementById('type-ratio-main').style.background = color;
+	document.getElementById('summary').style.borderColor = color;
 
 	// 각 유형 별 점수를 그래프로 환산하여 출력.
 	const scores = { D: 27, I: 28, S: 26, C: 24 };
@@ -42,6 +46,11 @@ const fnSetResult = () => {
 		document.getElementById('fill_' + key).style.width = percent + '%';
 		document.getElementById('num_' + key).innerHTML = percent + '%';
 	});
+
+	// // 각 타입에 따른 설명 영역 디스플레이 활성화.
+	Array.from(document.getElementsByClassName(type)).forEach(el => {
+		el.style.display = 'block';
+	})
 
 
 
