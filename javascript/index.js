@@ -21,8 +21,12 @@ document.addEventListener("DOMContentLoaded", () => {
 // ==================== ==================== ==================== ==================== ====================
 const fnSetSvgWidth = () => {
 	const root = document.getElementById('root');
+	const wWidth = Number(root.scrollWidth)*0.9;
 	const rWidth = Number(root.scrollWidth);
 
+	// M0 0 L0 60 L350 150 L700 20 L980 100 L980 0
+	const wper_30 = Math.round(wWidth * 0.35);
+	const wper_60 = Math.round(wWidth * 0.7);
 	const per_30 = Math.round(rWidth * 0.35);
 	const per_60 = Math.round(rWidth * 0.7);
 
@@ -32,24 +36,30 @@ const fnSetSvgWidth = () => {
 	dPath += "L" + per_60 + " 20 ";
 	dPath += "L" + rWidth + " 100 ";
 	dPath += "L" + rWidth + " 0 ";
-
-	// M0 0 L0 60 L350 150 L700 20 L980 100 L980 0
-	const svg_desc = document.getElementById('svg-desc');
-	const exp_desc = document.getElementById('exp-desc');
-	svg_desc.setAttribute("d", dPath);
-	exp_desc.setAttribute("d", dPath);
+	document.getElementById('svg-desc').setAttribute("d", dPath);
+	document.getElementById('exp-desc').setAttribute("d", dPath);
 
 
-	// 결과 페이지 SVG 랜더링
+	// 결과 비율
 	let rPath = "";
 	rPath += "M0 0 L0 60 ";
 	rPath += "L" + per_30 + " 100 ";
 	rPath += "L" + per_60 + " 10 ";
 	rPath += "L" + rWidth + " 50 ";
 	rPath += "L" + rWidth + " 0 ";
-
 	document.getElementById('svg-ratio-top').setAttribute("d", rPath);
 	document.getElementById('svg-ratio-bot').setAttribute("d", rPath);
+
+
+	// 명언
+	let wPath = "";
+	wPath += "M0 0 L0 30 ";
+	wPath += "L" + wper_30 + " 50 ";
+	wPath += "L" + wper_60 + " 10 ";
+	wPath += "L" + wWidth + " 50 ";
+	wPath += "L" + wWidth + " 0 ";
+	document.getElementById('svg-wise-top').setAttribute("d", wPath);
+	document.getElementById('svg-wise-bot').setAttribute("d", wPath);
 }
 
 

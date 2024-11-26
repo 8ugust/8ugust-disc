@@ -140,23 +140,41 @@
 
 #summary p {
     font-size: 30px;
-    display: none;
     margin: 0;
 }
 
 
 
 /* ==================== ==================== Media ==================== ==================== */
-.type-desc-inner { 
+#typeDescInner { 
     flex-direction: column;
     margin-bottom: 30px; 
     display: flex;
 }
 
-.type-desc-inner p {
+#typeDescInner p {
     margin: 30px 0; 
     font-size: 30px;
 }
+
+#wiseWrap {
+    justify-content: center;
+    flex-direction: column;
+    margin-top: -2px;
+    display: flex;
+    height: 300px;
+    width: 100%;
+}
+
+#wiseWrap p {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 30px;
+    color: white;
+    margin: 0 3%;
+}
+
+#wiseWrap p:nth-child(2) {text-align: right;}
 
 
 
