@@ -146,13 +146,13 @@
 
 
 /* ==================== ==================== Media ==================== ==================== */
-#typeDescInner { 
+.typeDescInner { 
     flex-direction: column;
     margin-bottom: 30px; 
     display: flex;
 }
 
-#typeDescInner p {
+.typeDescInner p {
     margin: 30px 0; 
     font-size: 30px;
 }
