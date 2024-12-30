@@ -113,7 +113,7 @@
 
 
 
-/* ==================== ==================== Media ==================== ==================== */
+/* ==================== ====================  desc ==================== ==================== */
 .result-desc-wrap {
     overflow-wrap: break-word;
     flex-direction: column;
@@ -125,7 +125,7 @@
     margin: 5%;
 }
 
-.result-desc-wrap > p:nth-child(1) {
+.result-desc-wrap > p {
     font-weight: bold;
     margin-bottom: 30px;
     font-size: 45px;
@@ -145,7 +145,7 @@
 
 
 
-/* ==================== ==================== Media ==================== ==================== */
+/* ==================== ==================== wise ==================== ==================== */
 .typeDescInner { 
     flex-direction: column;
     margin-bottom: 30px; 
@@ -178,6 +178,34 @@
 
 
 
+/* ==================== ==================== Media ==================== ==================== */
+
+.mbti-wrap {
+    display: flex;
+    height: 200px;
+    width: 100%;
+}
+
+.mbti-inner {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.mbti-inner > p {
+    background: rgb(255, 101, 101);
+    justify-content: center;
+    border-radius: 100px;
+    align-items: center;
+    display: flex;
+    height: 100%;
+    width: 200px;
+    font-size: 250%;
+    font-weight: bold;
+    color: white;
+}
 
 
 /* ==================== ==================== Media ==================== ==================== */

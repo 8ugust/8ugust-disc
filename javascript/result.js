@@ -20,12 +20,19 @@ const fnShowAd = () => {
 
 
 
-const fnSetResult = () => {
+const fnSetResult = (test) => {
+
+	// 테스트 DI 고정
+	if (test != undefined) {
+		this.global.result = [
+			[["D", 24], ["I", 19], ["S", 8], ["C", 7]], "DI"
+		];
+	}
+
 	const result = this.global.result[1]; // 결과(DI)
 	const type = this.global.category[result][1]; // 대표유형(D)
 	const strength = this.global.type[type][1]; // 대표유형명
 	const color = this.global.type[type][0]; // 대표유형색
-
 
 	// 헤더에 결과값 설정
 	document.getElementById('type').innerHTML = this.global.category[result][0];
@@ -55,15 +62,6 @@ const fnSetResult = () => {
 	Array.from(document.getElementsByClassName('p-section')).forEach((p, idx) => {
 		p.innerHTML = this.global.category[result][Number(idx) + 2];
 	})
-
-
-
-
-
-
-
-
-
 
 	// 결과 화면 오픈
 	document.getElementById('test-wrap').style.display = 'none';
