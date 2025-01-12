@@ -212,16 +212,19 @@
 /* ==================== ==================== Media ==================== ==================== */
 .footer-wrap {
     border: 1px solid #000C29;
+    justify-content: center;
+    flex-direction: column;
     background: #000C29;
+    align-items: center;
     margin-left: -5%;
+    font-size: 120%;
     margin-top: 5%;
+    color: white;
     display: flex;
     height: 200px;
     padding: 5%;
     width: 100%;
-
 }
-
 /* ==================== ==================== Media ==================== ==================== */
 
 @media (hover: hover) and (pointer: fine) {
