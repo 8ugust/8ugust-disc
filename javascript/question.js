@@ -142,5 +142,5 @@ const fnQuestEnd = (test) => {
 
 
 	// 결과 설정
-	fnSetResult(test);
+	fnSetResult();
 }
